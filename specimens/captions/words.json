@@ -1,0 +1,140 @@
+{
+ "source": "scratch timings: macOS say (not shipped) timed with whisper-cli DTW (large-v3-turbo), word ends trimmed at silencedetect pauses",
+ "words": [
+  {
+   "w": "Meet",
+   "start": 0.07,
+   "end": 0.19
+  },
+  {
+   "w": "Hesper,",
+   "start": 0.19,
+   "end": 0.672
+  },
+  {
+   "w": "the",
+   "start": 0.852,
+   "end": 1.07
+  },
+  {
+   "w": "reading",
+   "start": 1.07,
+   "end": 1.35
+  },
+  {
+   "w": "lamp",
+   "start": 1.35,
+   "end": 1.55
+  },
+  {
+   "w": "that",
+   "start": 1.55,
+   "end": 1.87
+  },
+  {
+   "w": "listens",
+   "start": 1.87,
+   "end": 2.11
+  },
+  {
+   "w": "when",
+   "start": 2.11,
+   "end": 2.27
+  },
+  {
+   "w": "you",
+   "start": 2.27,
+   "end": 2.69
+  },
+  {
+   "w": "talk.",
+   "start": 2.69,
+   "end": 2.89
+  },
+  {
+   "w": "Say",
+   "start": 3.15,
+   "end": 3.53
+  },
+  {
+   "w": "softer,",
+   "start": 3.53,
+   "end": 3.842
+  },
+  {
+   "w": "and",
+   "start": 4.022,
+   "end": 4.13
+  },
+  {
+   "w": "it",
+   "start": 4.13,
+   "end": 4.27
+  },
+  {
+   "w": "dims",
+   "start": 4.27,
+   "end": 4.63
+  },
+  {
+   "w": "before",
+   "start": 4.63,
+   "end": 4.83
+  },
+  {
+   "w": "you",
+   "start": 4.83,
+   "end": 5.27
+  },
+  {
+   "w": "finish.",
+   "start": 5.27,
+   "end": 5.496
+  },
+  {
+   "w": "Bright",
+   "start": 5.81,
+   "end": 5.99
+  },
+  {
+   "w": "for",
+   "start": 5.99,
+   "end": 6.41
+  },
+  {
+   "w": "work.",
+   "start": 6.41,
+   "end": 6.606
+  },
+  {
+   "w": "Warm",
+   "start": 6.89,
+   "end": 7.07
+  },
+  {
+   "w": "for",
+   "start": 7.07,
+   "end": 7.37
+  },
+  {
+   "w": "reading.",
+   "start": 7.37,
+   "end": 7.7
+  },
+  {
+   "w": "Dark",
+   "start": 7.99,
+   "end": 8.19
+  },
+  {
+   "w": "for",
+   "start": 8.19,
+   "end": 8.51
+  },
+  {
+   "w": "sleep.",
+   "start": 8.51,
+   "end": 8.701
+  }
+ ]
+}

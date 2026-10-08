@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>motion-film studio</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+  html, body { margin: 0; background: #1a1a1c; color: #ddd; font: 13px system-ui, sans-serif; }
+  #wrap { position: relative; }
+  #out { display: block; position: absolute; left: 0; top: 0; }
+  #stage { position: absolute; left: 0; top: 0; overflow: hidden; }
+  .bar { position: fixed; left: 12px; right: 12px; bottom: 10px; display: flex; gap: 10px; align-items: center; background: rgba(20,20,22,.85); padding: 6px 10px; border-radius: 8px; }
+  #scrub { flex: 1; } #tt { font-variant-numeric: tabular-nums; min-width: 260px; }
+  body.render .bar { display: none; }
+</style>
+<!-- 3D looks import three.js as ES modules; these names resolve to the project's node_modules (installed by
+     new_project.sh --with-3d). Nothing is fetched unless a module look imports them. -->
+<script type="importmap">{ "imports": {
+  "three": "./node_modules/three/build/three.module.js",
+  "three/addons/": "./node_modules/three/examples/jsm/",
+  "postprocessing": "./node_modules/postprocessing/build/index.js"
+} }</script>
+<script>
+  // Which project to load: ?project=specimens/uimorph renders a look's specimen; otherwise the project in src/.
+  // A project is a config.js (PROJECT) and a manifest.js (MANIFEST: looks, then scenes, as paths from this page).
+  const PROJECT_DIR = new URLSearchParams(location.search).get('project') || 'src';
+  document.write(`<script src="${PROJECT_DIR}/config.js"><\/script>`);
+</script>
+<script src="src/kit.js"></script>
+<script src="src/draw.js"></script>
+<script>document.write(`<script src="${PROJECT_DIR}/manifest.js"><\/script>`);</script>
+<!-- a .mjs file in the manifest loads as an ES module (after the classic scripts); it must register its setup with
+     whenReady() from a classic script first, so the first frame waits for it (see looks/toon3d.md) -->
+<script>for (const f of (typeof MANIFEST === 'undefined' ? [] : MANIFEST)) document.write(f.endsWith('.mjs') ? `<script type="module" src="${f}"><\/script>` : `<script src="${f}"><\/script>`);</script>
+</head>
+<body>
+<div id="wrap"><canvas id="out"></canvas><div id="stage"></div></div>
+<div class="bar"><input id="scrub" type="range" min="0" value="0"><span id="tt">loading…</span></div>
+<script>boot();</script>
+</body>
+</html>

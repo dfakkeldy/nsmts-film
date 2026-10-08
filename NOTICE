@@ -1,0 +1,11 @@
+render.mjs and the frame-by-frame contract (window.ready, renderAt, renderSheet, FRAME_ERRORS, shots, loops) come from
+the painted-music-video skill's engine in this repository, which is based on ClaudeAnimationBase by John Heibel (MIT
+licence, see LICENSE): https://github.com/JohnHeibel/ClaudeAnimationBase
+
+Added for motion-film: any frame size and fps, DOM (screenshot) capture beside canvas capture, sub-frame motion blur,
+onion skins, one-frame-per-beat sheets, the --inspect text checks, the --determinism check, sound-cue export for the
+video-sound skill, machine-wide render slots, kit.js (closed-form springs, follow/edges/drag, cursor, typing, text
+registry) and draw.js (flat motion-graphics helpers), and the looks in looks/.
+
+Fonts in fonts/ are under the SIL Open Font License 1.1; each licence is in fonts/licenses/ (Barlow Condensed,
+Fraunces, IBM Plex Mono, Space Grotesk, from github.com/google/fonts at commit ec0464b).

@@ -1,0 +1,11 @@
+{
+  "name": "motion-film",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Code-drawn short films (ads, launch films, UI motion, explainers, story shorts), rendered frame by frame in headless Chrome",
+  "type": "module",
+  "dependencies": {
+    "puppeteer-core": "^25.11.0"
+  }
+}

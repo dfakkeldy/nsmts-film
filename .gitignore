@@ -1,0 +1,8 @@
+node_modules
+out/
+.DS_Store
+__pycache__/
+*.pyc
+sound/*.wav
+sound/*.mp3
+sound/elevenlabs/
