@@ -323,7 +323,7 @@ async function goldMine(t, box) {
 const TAKES_B = [
   { t0: 45.75, name: 'r2-georef', T: [[45.75, .2], [51.8, 3.55], [54.25, 7.95]], C: [[0, [0, 0, 1500]]],
     lens: { at: [700, 201], t0: 48.25, t1: 49.9, r: 130, mag: 1.8 } },
-  { t0: 54.05, name: 'r3-terrain', T: [[53.85, .6], [57.8, 5.0]], C: [[0, [330, 0, 1590]]] },
+  { t0: 54.05, name: 'r3-terrain', T: [[53.85, .4], [57.8, 3.8]], C: [[0, [420, 215, 1250]]] },   // the ridges, under the sea and sky; above the attribution
   { t0: G0, name: RG, draw: goldMine },
   ...[
     { t0: 57.6, name: 'r4-hydro', T: [[57.4, 3.0], [59.57, 4.8], [61.2, 6.5]], C: [[59.3, [600, 60, 1100]], [60.1, [820, 120, 800]]] },
@@ -335,6 +335,9 @@ const TAKES_B = [
 async function desktopPage(t) {
   await clips(t, TAKES_B, WIN);
   frameRect(WIN, 1);
+  // R3 is recorded at the app's maximum height exaggeration (10x), so the plate says so, as a map's relief note would
+  const vx = seg(t, 54.3, 54.6) * (1 - seg(t, G0 - .25, G0 + .05));
+  if (vx > 0) PLT.label(vx > .9 ? 'vex' : null, 'Heights exaggerated 10×', WIN[0] + WIN[2], 86 * U, { family: 'Space Grotesk', weight: 500, size: 28 * U, color: GRA, align: 'right', alpha: vx });
   const c = clipAt(t, TAKES_B);
   if (c.lens && t > c.lens.t0 && t < (c.lens.t1 ?? Infinity) + .5 && hasTake(c.name)) await footLens(c.name, takeTime(t, c.T), cropAt(t, c.C, WIN), WIN, c.lens.at, c.lens.r * U, c.lens.mag, glide(t, c.lens.t0, c.lens.t1));
 }

@@ -10,7 +10,7 @@ recording. The takes are recordings of the live site, kinnokilabs.com, made in t
 |---|---|---|---|
 | R1 | 5471 Highway 19 searched, PID 50169663's sheet scrolling through its checks | frame-controlled, 1920 x 1080 | 30.6-39.6 s, with a loupe on "No mapped water feature intersects this parcel." |
 | R2 | Fletcher sheet 16 in the georeferencer: residuals, point 4 off most (180 m), curved warp, a drag and Undo | step capture | 45.8-54.1 s, loupe on point 4's row |
-| R3 | The Fletcher sheets on 3D terrain over the Mabou Highlands (zoom 14), a slow turn west | step capture, browser cache off (see below) | 54.1-57.6 s |
+| R3 | The Fletcher sheets on 3D terrain over the Mabou Highlands (zoom 14), height exaggeration 10x (the slider's maximum, Dan's preference), a slow turn west | step capture, browser cache off (see below) | 54.1-57.6 s, cropped to the ridges; the plate notes "Heights exaggerated 10×" |
 | RG | Fletcher sheet 19's "Gold Mine" beside Glendale Brook (reviewed feature F19-JUD-094): the label on hover, zoom 14 to 15, the popup with the scan excerpt | frame-controlled | 57.6-62.9 s, the zoom drawn in the film (see below), pushed in on the popup |
 | R4 | Inverness micro-hydro screen: Margaree R. reach popup | frame-controlled | 62.9-66.3 s, pushed in on the popup |
 | R5 | Rhodena turbine visibility, viewpoint at Long Point: 2 of 6 tips potentially visible | step capture | 66.3-69.5 s |
@@ -109,6 +109,10 @@ know". On 2026-10-09 Dan reported the gap fix live; a fresh browser on the live 
 Mabou (46.09 N) without a gap. The highlands framing stays, since Mabou village itself sits in the green-striped unit.
 
 ## Decisions (Dan, 2026-10-09)
+
+- **3D terrain**: Dan prefers the exaggeration turned right up, so R3 is recorded at 10x (3D settings > Terrain height >
+  Height exaggeration, set before recording; the app doesn't keep it between visits). Because 10x is not true
+  relief, the plate carries "Heights exaggerated 10×" while R3 is on screen.
 
 - **GeoPDF import on iPhone**: works on Dan's iPhone, so "Bring GeoPDFs in too" stands.
 - **Voice credit**: dropped from the end card.

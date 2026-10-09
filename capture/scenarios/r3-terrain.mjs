@@ -1,5 +1,6 @@
 // R3: the Fletcher sheets over the Mabou Highlands (sheet 14, 1884; zoom 14 on the orange core, clear of the sheets'
-// joins), switched to 3D terrain, then a slow turn (ctrl-drag) across the draped sheets.
+// joins), switched to 3D terrain with the height exaggeration at the slider's maximum (10x, Dan's preference), then a
+// slow turn (ctrl-drag) across the draped sheets.
 // Recorded with record-steps.mjs: the 3D view stalls frame-controlled capture.
 export const options = {
   storage: { "ns-marks-the-spot:province-license:v1": "accepted" },
@@ -13,6 +14,22 @@ export async function run(page, h) {
   await h.settle(25000);
   const retry = await h.find("Retry 3D");
   if (retry) console.error("3D reported a failed source; retrying"), await h.during(page.mouse.click(...retry)), await h.settle(20000);
+  // 3D settings > Terrain height > Height exaggeration, clicked at the slider's right end (its maximum), then closed.
+  const gear = await h.find("3D settings");
+  if (!gear) throw new Error("no 3D settings button");
+  await h.during(page.mouse.click(...gear)); await h.settle(1500);
+  const height = await h.find("Terrain height", "summary");
+  if (height) await h.during(page.mouse.click(...height)), await h.settle(1000);
+  const slider = await page.evaluate(() => {
+    const r = [...document.querySelectorAll("input[type=range]")].find((e) => e.getBoundingClientRect().width > 0 && /Height exaggeration/.test(e.closest("label")?.innerText ?? ""));
+    if (!r) return null; const b = r.getBoundingClientRect(); return [Math.round(b.x + b.width - 2), Math.round(b.y + b.height / 2)];
+  });
+  if (!slider) throw new Error("no height exaggeration slider");
+  await h.during(page.mouse.click(...slider)); await h.settle(1000);
+  const shown = await page.evaluate(() => [...document.querySelectorAll(".relief-slider output")].map((o) => o.innerText).join(" "));
+  console.error("height exaggeration:", shown);
+  if (!/^10×/.test(shown)) throw new Error("exaggeration not at 10x: " + shown);
+  await h.during(page.mouse.click(...gear)); await h.settle(25000);
   await h.start();
   await h.wait(0.4);
   // Ctrl-drag right to left turns the view west, toward Cape Mabou and the sea, away from the sheets' joins to the
