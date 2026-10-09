@@ -61,3 +61,8 @@ offline, because there's no signal at work. When an address isn't in the list, I
 coworkers use it too."
 
 Estimate for one take of the proposed paragraph: 164 credits (about US$0.03).
+
+## v1.2 (2026-10-09): the narration
+
+Dan chose the plain Poker paragraph. Text: brief/narration-v1.2.txt (270 words). Audio: take 1 with the new
+paragraph spliced in, 84.1 s. Word timings: sound/words/narration-v1.2.json.

@@ -1,0 +1,11 @@
+{
+ "take1_cut_in": 71.9,
+ "take1_cut_out": 88.71,
+ "clip_on": 0.01,
+ "clip_off": 9.25,
+ "gain_db": -1.32,
+ "pre_pad": 0.23,
+ "post_pad": 0.02,
+ "clip_start_in_v12": 72.13,
+ "duration": 84.12
+}
