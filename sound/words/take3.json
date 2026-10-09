@@ -1,0 +1,1490 @@
+{
+ "source": "word list",
+ "words": [
+  {
+   "w": "This",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "w": "is",
+   "start": 0.16,
+   "end": 0.28
+  },
+  {
+   "w": "Mabou",
+   "start": 0.32,
+   "end": 0.72
+  },
+  {
+   "w": "in",
+   "start": 0.8,
+   "end": 0.92
+  },
+  {
+   "w": "the",
+   "start": 0.96,
+   "end": 1.027
+  },
+  {
+   "w": "1880s,",
+   "start": 1.04,
+   "end": 1.6
+  },
+  {
+   "w": "as",
+   "start": 1.632,
+   "end": 2.0
+  },
+  {
+   "w": "Hugh",
+   "start": 2.16,
+   "end": 2.4
+  },
+  {
+   "w": "Fletcher",
+   "start": 2.44,
+   "end": 2.869
+  },
+  {
+   "w": "surveyed",
+   "start": 2.891,
+   "end": 3.227
+  },
+  {
+   "w": "it.",
+   "start": 3.253,
+   "end": 3.36
+  },
+  {
+   "w": "And",
+   "start": 3.44,
+   "end": 3.8
+  },
+  {
+   "w": "this",
+   "start": 4.0,
+   "end": 4.24
+  },
+  {
+   "w": "is",
+   "start": 4.32,
+   "end": 4.48
+  },
+  {
+   "w": "Mabou",
+   "start": 4.56,
+   "end": 4.88
+  },
+  {
+   "w": "today.",
+   "start": 4.96,
+   "end": 5.84
+  },
+  {
+   "w": "I'm",
+   "start": 6.08,
+   "end": 6.24
+  },
+  {
+   "w": "Dan",
+   "start": 6.36,
+   "end": 6.48
+  },
+  {
+   "w": "Fakkeldy,",
+   "start": 6.56,
+   "end": 7.12
+  },
+  {
+   "w": "and",
+   "start": 7.16,
+   "end": 7.2
+  },
+  {
+   "w": "I",
+   "start": 7.28,
+   "end": 7.36
+  },
+  {
+   "w": "built",
+   "start": 7.48,
+   "end": 7.6
+  },
+  {
+   "w": "NS",
+   "start": 7.68,
+   "end": 7.92
+  },
+  {
+   "w": "Marks",
+   "start": 8.0,
+   "end": 8.24
+  },
+  {
+   "w": "The",
+   "start": 8.28,
+   "end": 8.32
+  },
+  {
+   "w": "Spot",
+   "start": 8.4,
+   "end": 8.72
+  },
+  {
+   "w": "to",
+   "start": 8.8,
+   "end": 8.88
+  },
+  {
+   "w": "put",
+   "start": 8.96,
+   "end": 9.04
+  },
+  {
+   "w": "them",
+   "start": 9.08,
+   "end": 9.12
+  },
+  {
+   "w": "on",
+   "start": 9.2,
+   "end": 9.28
+  },
+  {
+   "w": "the",
+   "start": 9.32,
+   "end": 9.36
+  },
+  {
+   "w": "same",
+   "start": 9.44,
+   "end": 9.68
+  },
+  {
+   "w": "map.",
+   "start": 9.84,
+   "end": 10.2
+  },
+  {
+   "w": "Nova",
+   "start": 10.4,
+   "end": 10.64
+  },
+  {
+   "w": "Scotia",
+   "start": 10.72,
+   "end": 11.12
+  },
+  {
+   "w": "publishes",
+   "start": 11.28,
+   "end": 11.6
+  },
+  {
+   "w": "a",
+   "start": 11.68,
+   "end": 11.76
+  },
+  {
+   "w": "lot",
+   "start": 11.84,
+   "end": 12.0
+  },
+  {
+   "w": "of",
+   "start": 12.08,
+   "end": 12.16
+  },
+  {
+   "w": "map",
+   "start": 12.24,
+   "end": 12.4
+  },
+  {
+   "w": "data,",
+   "start": 12.48,
+   "end": 12.96
+  },
+  {
+   "w": "but",
+   "start": 13.0,
+   "end": 13.04
+  },
+  {
+   "w": "it's",
+   "start": 13.12,
+   "end": 13.28
+  },
+  {
+   "w": "scattered:",
+   "start": 13.36,
+   "end": 14.08
+  },
+  {
+   "w": "provincial",
+   "start": 14.16,
+   "end": 14.48
+  },
+  {
+   "w": "ArcGIS",
+   "start": 14.56,
+   "end": 15.2
+  },
+  {
+   "w": "services,",
+   "start": 15.28,
+   "end": 15.92
+  },
+  {
+   "w": "open",
+   "start": 16.0,
+   "end": 16.24
+  },
+  {
+   "w": "data",
+   "start": 16.32,
+   "end": 16.56
+  },
+  {
+   "w": "portals,",
+   "start": 16.64,
+   "end": 17.2
+  },
+  {
+   "w": "federal",
+   "start": 17.28,
+   "end": 17.6
+  },
+  {
+   "w": "and",
+   "start": 17.64,
+   "end": 17.68
+  },
+  {
+   "w": "municipal",
+   "start": 17.76,
+   "end": 18.16
+  },
+  {
+   "w": "servers.",
+   "start": 18.24,
+   "end": 18.88
+  },
+  {
+   "w": "I",
+   "start": 19.04,
+   "end": 19.12
+  },
+  {
+   "w": "know",
+   "start": 19.2,
+   "end": 19.28
+  },
+  {
+   "w": "where",
+   "start": 19.4,
+   "end": 19.52
+  },
+  {
+   "w": "it",
+   "start": 19.56,
+   "end": 19.6
+  },
+  {
+   "w": "lives,",
+   "start": 19.68,
+   "end": 20.16
+  },
+  {
+   "w": "how",
+   "start": 20.24,
+   "end": 20.32
+  },
+  {
+   "w": "to",
+   "start": 20.4,
+   "end": 20.48
+  },
+  {
+   "w": "query",
+   "start": 20.64,
+   "end": 20.8
+  },
+  {
+   "w": "it,",
+   "start": 20.88,
+   "end": 21.04
+  },
+  {
+   "w": "and",
+   "start": 21.08,
+   "end": 21.12
+  },
+  {
+   "w": "what",
+   "start": 21.2,
+   "end": 21.36
+  },
+  {
+   "w": "each",
+   "start": 21.44,
+   "end": 21.6
+  },
+  {
+   "w": "licence",
+   "start": 21.68,
+   "end": 22.08
+  },
+  {
+   "w": "allows.",
+   "start": 22.32,
+   "end": 22.64
+  },
+  {
+   "w": "The",
+   "start": 22.96,
+   "end": 23.0
+  },
+  {
+   "w": "map",
+   "start": 23.04,
+   "end": 23.28
+  },
+  {
+   "w": "draws",
+   "start": 23.4,
+   "end": 23.6
+  },
+  {
+   "w": "on",
+   "start": 23.68,
+   "end": 23.76
+  },
+  {
+   "w": "more",
+   "start": 23.84,
+   "end": 23.92
+  },
+  {
+   "w": "than",
+   "start": 23.96,
+   "end": 24.0
+  },
+  {
+   "w": "a",
+   "start": 24.08,
+   "end": 24.24
+  },
+  {
+   "w": "hundred",
+   "start": 24.28,
+   "end": 24.56
+  },
+  {
+   "w": "layers,",
+   "start": 24.64,
+   "end": 25.12
+  },
+  {
+   "w": "and",
+   "start": 25.2,
+   "end": 25.28
+  },
+  {
+   "w": "every",
+   "start": 25.36,
+   "end": 25.6
+  },
+  {
+   "w": "one",
+   "start": 25.68,
+   "end": 25.92
+  },
+  {
+   "w": "keeps",
+   "start": 26.0,
+   "end": 26.16
+  },
+  {
+   "w": "its",
+   "start": 26.24,
+   "end": 26.4
+  },
+  {
+   "w": "source",
+   "start": 26.56,
+   "end": 26.72
+  },
+  {
+   "w": "and",
+   "start": 26.8,
+   "end": 26.88
+  },
+  {
+   "w": "licence",
+   "start": 26.96,
+   "end": 27.36
+  },
+  {
+   "w": "on",
+   "start": 27.44,
+   "end": 27.52
+  },
+  {
+   "w": "screen.",
+   "start": 27.6,
+   "end": 28.16
+  },
+  {
+   "w": "Pick",
+   "start": 28.32,
+   "end": 28.48
+  },
+  {
+   "w": "a",
+   "start": 28.56,
+   "end": 28.6
+  },
+  {
+   "w": "parcel",
+   "start": 28.64,
+   "end": 29.04
+  },
+  {
+   "w": "and",
+   "start": 29.12,
+   "end": 29.2
+  },
+  {
+   "w": "it",
+   "start": 29.24,
+   "end": 29.28
+  },
+  {
+   "w": "checks",
+   "start": 29.36,
+   "end": 29.6
+  },
+  {
+   "w": "roads,",
+   "start": 29.68,
+   "end": 30.32
+  },
+  {
+   "w": "water,",
+   "start": 30.48,
+   "end": 30.88
+  },
+  {
+   "w": "buildings,",
+   "start": 31.0,
+   "end": 31.6
+  },
+  {
+   "w": "civic",
+   "start": 31.64,
+   "end": 31.84
+  },
+  {
+   "w": "addresses",
+   "start": 31.92,
+   "end": 32.32
+  },
+  {
+   "w": "and",
+   "start": 32.36,
+   "end": 32.4
+  },
+  {
+   "w": "assessments,",
+   "start": 32.52,
+   "end": 33.28
+  },
+  {
+   "w": "each",
+   "start": 33.4,
+   "end": 33.52
+  },
+  {
+   "w": "against",
+   "start": 33.68,
+   "end": 33.84
+  },
+  {
+   "w": "its",
+   "start": 33.96,
+   "end": 34.08
+  },
+  {
+   "w": "own",
+   "start": 34.2,
+   "end": 34.32
+  },
+  {
+   "w": "source,",
+   "start": 34.4,
+   "end": 34.96
+  },
+  {
+   "w": "and",
+   "start": 35.0,
+   "end": 35.04
+  },
+  {
+   "w": "it",
+   "start": 35.12,
+   "end": 35.2
+  },
+  {
+   "w": "tells",
+   "start": 35.24,
+   "end": 35.44
+  },
+  {
+   "w": "you",
+   "start": 35.48,
+   "end": 35.52
+  },
+  {
+   "w": "when",
+   "start": 35.6,
+   "end": 35.68
+  },
+  {
+   "w": "a",
+   "start": 35.72,
+   "end": 35.76
+  },
+  {
+   "w": "source",
+   "start": 35.88,
+   "end": 36.0
+  },
+  {
+   "w": "comes",
+   "start": 36.08,
+   "end": 36.24
+  },
+  {
+   "w": "back",
+   "start": 36.32,
+   "end": 36.48
+  },
+  {
+   "w": "empty.",
+   "start": 36.56,
+   "end": 37.08
+  },
+  {
+   "w": "Georeferencing",
+   "start": 37.28,
+   "end": 38.08
+  },
+  {
+   "w": "is",
+   "start": 38.16,
+   "end": 38.24
+  },
+  {
+   "w": "the",
+   "start": 38.28,
+   "end": 38.32
+  },
+  {
+   "w": "heart",
+   "start": 38.48,
+   "end": 38.64
+  },
+  {
+   "w": "of",
+   "start": 38.68,
+   "end": 38.72
+  },
+  {
+   "w": "it.",
+   "start": 38.8,
+   "end": 39.12
+  },
+  {
+   "w": "Drop",
+   "start": 39.28,
+   "end": 39.52
+  },
+  {
+   "w": "in",
+   "start": 39.56,
+   "end": 39.6
+  },
+  {
+   "w": "a",
+   "start": 39.64,
+   "end": 39.68
+  },
+  {
+   "w": "scan,",
+   "start": 39.76,
+   "end": 40.32
+  },
+  {
+   "w": "match",
+   "start": 40.44,
+   "end": 40.56
+  },
+  {
+   "w": "a",
+   "start": 40.6,
+   "end": 40.64
+  },
+  {
+   "w": "few",
+   "start": 40.72,
+   "end": 40.8
+  },
+  {
+   "w": "landmarks,",
+   "start": 40.88,
+   "end": 41.48
+  },
+  {
+   "w": "and",
+   "start": 41.52,
+   "end": 41.6
+  },
+  {
+   "w": "it",
+   "start": 41.68,
+   "end": 41.76
+  },
+  {
+   "w": "drapes",
+   "start": 41.84,
+   "end": 42.16
+  },
+  {
+   "w": "onto",
+   "start": 42.28,
+   "end": 42.4
+  },
+  {
+   "w": "today's",
+   "start": 42.48,
+   "end": 42.8
+  },
+  {
+   "w": "map.",
+   "start": 42.88,
+   "end": 43.44
+  },
+  {
+   "w": "Every",
+   "start": 43.52,
+   "end": 43.76
+  },
+  {
+   "w": "point",
+   "start": 43.84,
+   "end": 44.08
+  },
+  {
+   "w": "shows",
+   "start": 44.16,
+   "end": 44.4
+  },
+  {
+   "w": "how",
+   "start": 44.48,
+   "end": 44.64
+  },
+  {
+   "w": "well",
+   "start": 44.72,
+   "end": 44.8
+  },
+  {
+   "w": "it",
+   "start": 44.88,
+   "end": 44.96
+  },
+  {
+   "w": "fits,",
+   "start": 45.04,
+   "end": 45.44
+  },
+  {
+   "w": "and",
+   "start": 45.48,
+   "end": 45.52
+  },
+  {
+   "w": "which",
+   "start": 45.6,
+   "end": 45.76
+  },
+  {
+   "w": "one",
+   "start": 45.84,
+   "end": 45.92
+  },
+  {
+   "w": "disagrees",
+   "start": 46.0,
+   "end": 46.48
+  },
+  {
+   "w": "with",
+   "start": 46.56,
+   "end": 46.64
+  },
+  {
+   "w": "the",
+   "start": 46.68,
+   "end": 46.72
+  },
+  {
+   "w": "rest.",
+   "start": 46.92,
+   "end": 47.44
+  },
+  {
+   "w": "Hand-drawn",
+   "start": 47.56,
+   "end": 48.0
+  },
+  {
+   "w": "maps",
+   "start": 48.16,
+   "end": 48.32
+  },
+  {
+   "w": "bend,",
+   "start": 48.48,
+   "end": 49.04
+  },
+  {
+   "w": "so",
+   "start": 49.12,
+   "end": 49.2
+  },
+  {
+   "w": "a",
+   "start": 49.24,
+   "end": 49.28
+  },
+  {
+   "w": "curved",
+   "start": 49.36,
+   "end": 49.68
+  },
+  {
+   "w": "warp",
+   "start": 49.76,
+   "end": 50.0
+  },
+  {
+   "w": "passes",
+   "start": 50.2,
+   "end": 50.4
+  },
+  {
+   "w": "through",
+   "start": 50.52,
+   "end": 50.64
+  },
+  {
+   "w": "every",
+   "start": 50.72,
+   "end": 50.96
+  },
+  {
+   "w": "point.",
+   "start": 51.04,
+   "end": 51.68
+  },
+  {
+   "w": "That's",
+   "start": 51.76,
+   "end": 51.92
+  },
+  {
+   "w": "how",
+   "start": 52.0,
+   "end": 52.08
+  },
+  {
+   "w": "twenty-four",
+   "start": 52.24,
+   "end": 52.64
+  },
+  {
+   "w": "of",
+   "start": 52.72,
+   "end": 52.8
+  },
+  {
+   "w": "Fletcher's",
+   "start": 52.907,
+   "end": 53.2
+  },
+  {
+   "w": "sheets",
+   "start": 53.36,
+   "end": 53.52
+  },
+  {
+   "w": "got",
+   "start": 53.6,
+   "end": 53.68
+  },
+  {
+   "w": "onto",
+   "start": 53.76,
+   "end": 53.92
+  },
+  {
+   "w": "the",
+   "start": 54.0,
+   "end": 54.08
+  },
+  {
+   "w": "map.",
+   "start": 54.24,
+   "end": 54.72
+  },
+  {
+   "w": "It",
+   "start": 54.76,
+   "end": 54.8
+  },
+  {
+   "w": "also",
+   "start": 54.88,
+   "end": 55.12
+  },
+  {
+   "w": "screens",
+   "start": 55.2,
+   "end": 55.6
+  },
+  {
+   "w": "rivers",
+   "start": 55.64,
+   "end": 56.0
+  },
+  {
+   "w": "for",
+   "start": 56.04,
+   "end": 56.08
+  },
+  {
+   "w": "small",
+   "start": 56.16,
+   "end": 56.4
+  },
+  {
+   "w": "hydro,",
+   "start": 56.48,
+   "end": 57.12
+  },
+  {
+   "w": "and",
+   "start": 57.24,
+   "end": 57.36
+  },
+  {
+   "w": "shows",
+   "start": 57.44,
+   "end": 57.68
+  },
+  {
+   "w": "where",
+   "start": 57.72,
+   "end": 57.76
+  },
+  {
+   "w": "a",
+   "start": 57.84,
+   "end": 57.92
+  },
+  {
+   "w": "proposed",
+   "start": 58.0,
+   "end": 58.32
+  },
+  {
+   "w": "wind",
+   "start": 58.4,
+   "end": 58.56
+  },
+  {
+   "w": "farm",
+   "start": 58.64,
+   "end": 58.88
+  },
+  {
+   "w": "could",
+   "start": 58.96,
+   "end": 59.04
+  },
+  {
+   "w": "be",
+   "start": 59.12,
+   "end": 59.2
+  },
+  {
+   "w": "seen",
+   "start": 59.32,
+   "end": 59.44
+  },
+  {
+   "w": "from,",
+   "start": 59.56,
+   "end": 59.92
+  },
+  {
+   "w": "on",
+   "start": 60.0,
+   "end": 60.08
+  },
+  {
+   "w": "bare",
+   "start": 60.16,
+   "end": 60.32
+  },
+  {
+   "w": "earth.",
+   "start": 60.4,
+   "end": 61.04
+  },
+  {
+   "w": "Frame",
+   "start": 61.2,
+   "end": 61.36
+  },
+  {
+   "w": "a",
+   "start": 61.4,
+   "end": 61.44
+  },
+  {
+   "w": "map",
+   "start": 61.6,
+   "end": 61.76
+  },
+  {
+   "w": "and",
+   "start": 61.84,
+   "end": 61.92
+  },
+  {
+   "w": "export",
+   "start": 62.16,
+   "end": 62.4
+  },
+  {
+   "w": "a",
+   "start": 62.44,
+   "end": 62.48
+  },
+  {
+   "w": "georeferenced",
+   "start": 62.56,
+   "end": 63.2
+  },
+  {
+   "w": "PDF.",
+   "start": 63.28,
+   "end": 64.16
+  },
+  {
+   "w": "Bring",
+   "start": 64.24,
+   "end": 64.4
+  },
+  {
+   "w": "GeoPDFs",
+   "start": 64.48,
+   "end": 65.2
+  },
+  {
+   "w": "in",
+   "start": 65.28,
+   "end": 65.36
+  },
+  {
+   "w": "too,",
+   "start": 65.44,
+   "end": 65.76
+  },
+  {
+   "w": "and",
+   "start": 65.84,
+   "end": 65.92
+  },
+  {
+   "w": "see",
+   "start": 66.0,
+   "end": 66.08
+  },
+  {
+   "w": "where",
+   "start": 66.16,
+   "end": 66.24
+  },
+  {
+   "w": "you",
+   "start": 66.28,
+   "end": 66.32
+  },
+  {
+   "w": "are",
+   "start": 66.4,
+   "end": 66.48
+  },
+  {
+   "w": "on",
+   "start": 66.56,
+   "end": 66.64
+  },
+  {
+   "w": "them.",
+   "start": 66.72,
+   "end": 67.2
+  },
+  {
+   "w": "On",
+   "start": 67.24,
+   "end": 67.28
+  },
+  {
+   "w": "a",
+   "start": 67.36,
+   "end": 67.44
+  },
+  {
+   "w": "phone,",
+   "start": 67.52,
+   "end": 67.92
+  },
+  {
+   "w": "it",
+   "start": 67.96,
+   "end": 68.0
+  },
+  {
+   "w": "logs",
+   "start": 68.08,
+   "end": 68.4
+  },
+  {
+   "w": "points,",
+   "start": 68.6,
+   "end": 68.96
+  },
+  {
+   "w": "photos",
+   "start": 69.16,
+   "end": 69.36
+  },
+  {
+   "w": "and",
+   "start": 69.44,
+   "end": 69.6
+  },
+  {
+   "w": "tracks.",
+   "start": 69.84,
+   "end": 70.4
+  },
+  {
+   "w": "It",
+   "start": 70.44,
+   "end": 70.48
+  },
+  {
+   "w": "all",
+   "start": 70.56,
+   "end": 70.64
+  },
+  {
+   "w": "stays",
+   "start": 70.72,
+   "end": 70.96
+  },
+  {
+   "w": "on",
+   "start": 71.0,
+   "end": 71.04
+  },
+  {
+   "w": "the",
+   "start": 71.12,
+   "end": 71.16
+  },
+  {
+   "w": "device",
+   "start": 71.2,
+   "end": 71.6
+  },
+  {
+   "w": "until",
+   "start": 71.72,
+   "end": 71.84
+  },
+  {
+   "w": "you",
+   "start": 71.92,
+   "end": 71.96
+  },
+  {
+   "w": "export",
+   "start": 72.0,
+   "end": 72.4
+  },
+  {
+   "w": "it.",
+   "start": 72.44,
+   "end": 72.88
+  },
+  {
+   "w": "This",
+   "start": 72.96,
+   "end": 73.04
+  },
+  {
+   "w": "one",
+   "start": 73.12,
+   "end": 73.2
+  },
+  {
+   "w": "I",
+   "start": 73.28,
+   "end": 73.36
+  },
+  {
+   "w": "use",
+   "start": 73.44,
+   "end": 73.52
+  },
+  {
+   "w": "at",
+   "start": 73.56,
+   "end": 73.6
+  },
+  {
+   "w": "work.",
+   "start": 73.68,
+   "end": 74.2
+  },
+  {
+   "w": "Where's",
+   "start": 74.4,
+   "end": 74.56
+  },
+  {
+   "w": "that",
+   "start": 74.64,
+   "end": 74.72
+  },
+  {
+   "w": "house?",
+   "start": 74.8,
+   "end": 75.36
+  },
+  {
+   "w": "Is",
+   "start": 75.52,
+   "end": 75.6
+  },
+  {
+   "w": "the",
+   "start": 75.64,
+   "end": 75.68
+  },
+  {
+   "w": "driveway",
+   "start": 75.76,
+   "end": 76.08
+  },
+  {
+   "w": "too",
+   "start": 76.16,
+   "end": 76.24
+  },
+  {
+   "w": "far?",
+   "start": 76.4,
+   "end": 77.04
+  },
+  {
+   "w": "There's",
+   "start": 77.08,
+   "end": 77.2
+  },
+  {
+   "w": "no",
+   "start": 77.24,
+   "end": 77.28
+  },
+  {
+   "w": "signal",
+   "start": 77.44,
+   "end": 77.68
+  },
+  {
+   "w": "at",
+   "start": 77.76,
+   "end": 77.84
+  },
+  {
+   "w": "work,",
+   "start": 77.92,
+   "end": 78.2
+  },
+  {
+   "w": "so",
+   "start": 78.24,
+   "end": 78.32
+  },
+  {
+   "w": "I",
+   "start": 78.36,
+   "end": 78.4
+  },
+  {
+   "w": "made",
+   "start": 78.48,
+   "end": 78.56
+  },
+  {
+   "w": "it",
+   "start": 78.6,
+   "end": 78.64
+  },
+  {
+   "w": "run",
+   "start": 78.72,
+   "end": 78.8
+  },
+  {
+   "w": "offline.",
+   "start": 78.88,
+   "end": 79.6
+  },
+  {
+   "w": "My",
+   "start": 79.76,
+   "end": 79.84
+  },
+  {
+   "w": "coworkers",
+   "start": 79.92,
+   "end": 80.4
+  },
+  {
+   "w": "use",
+   "start": 80.48,
+   "end": 80.56
+  },
+  {
+   "w": "it",
+   "start": 80.64,
+   "end": 80.72
+  },
+  {
+   "w": "too.",
+   "start": 80.8,
+   "end": 81.36
+  },
+  {
+   "w": "One",
+   "start": 81.4,
+   "end": 81.44
+  },
+  {
+   "w": "day",
+   "start": 81.52,
+   "end": 81.68
+  },
+  {
+   "w": "I",
+   "start": 81.84,
+   "end": 81.88
+  },
+  {
+   "w": "couldn't",
+   "start": 81.92,
+   "end": 82.16
+  },
+  {
+   "w": "find",
+   "start": 82.28,
+   "end": 82.4
+  },
+  {
+   "w": "an",
+   "start": 82.44,
+   "end": 82.48
+  },
+  {
+   "w": "address:",
+   "start": 82.56,
+   "end": 83.28
+  },
+  {
+   "w": "not",
+   "start": 83.36,
+   "end": 83.52
+  },
+  {
+   "w": "in",
+   "start": 83.56,
+   "end": 83.6
+  },
+  {
+   "w": "the",
+   "start": 83.64,
+   "end": 83.68
+  },
+  {
+   "w": "list,",
+   "start": 83.76,
+   "end": 84.133
+  },
+  {
+   "w": "and",
+   "start": 84.187,
+   "end": 84.24
+  },
+  {
+   "w": "no",
+   "start": 84.32,
+   "end": 84.4
+  },
+  {
+   "w": "house",
+   "start": 84.48,
+   "end": 84.8
+  },
+  {
+   "w": "on",
+   "start": 84.84,
+   "end": 84.88
+  },
+  {
+   "w": "the",
+   "start": 84.92,
+   "end": 84.96
+  },
+  {
+   "w": "aerial.",
+   "start": 85.04,
+   "end": 85.76
+  },
+  {
+   "w": "I",
+   "start": 85.8,
+   "end": 85.84
+  },
+  {
+   "w": "know",
+   "start": 85.92,
+   "end": 86.08
+  },
+  {
+   "w": "almost",
+   "start": 86.28,
+   "end": 86.48
+  },
+  {
+   "w": "every",
+   "start": 86.56,
+   "end": 86.8
+  },
+  {
+   "w": "address",
+   "start": 87.0,
+   "end": 87.2
+  },
+  {
+   "w": "now.",
+   "start": 87.32,
+   "end": 87.84
+  },
+  {
+   "w": "I",
+   "start": 87.92,
+   "end": 88.0
+  },
+  {
+   "w": "built",
+   "start": 88.08,
+   "end": 88.16
+  },
+  {
+   "w": "it",
+   "start": 88.24,
+   "end": 88.32
+  },
+  {
+   "w": "for",
+   "start": 88.4,
+   "end": 88.48
+  },
+  {
+   "w": "whoever",
+   "start": 88.56,
+   "end": 88.8
+  },
+  {
+   "w": "starts",
+   "start": 88.96,
+   "end": 89.12
+  },
+  {
+   "w": "next.",
+   "start": 89.2,
+   "end": 89.84
+  },
+  {
+   "w": "It's",
+   "start": 89.92,
+   "end": 90.04
+  },
+  {
+   "w": "also",
+   "start": 90.08,
+   "end": 90.32
+  },
+  {
+   "w": "a",
+   "start": 90.36,
+   "end": 90.4
+  },
+  {
+   "w": "native",
+   "start": 90.48,
+   "end": 90.72
+  },
+  {
+   "w": "iPhone",
+   "start": 90.8,
+   "end": 91.2
+  },
+  {
+   "w": "app,",
+   "start": 91.32,
+   "end": 91.6
+  },
+  {
+   "w": "in",
+   "start": 91.68,
+   "end": 91.76
+  },
+  {
+   "w": "TestFlight.",
+   "start": 91.84,
+   "end": 92.64
+  }
+ ]
+}
