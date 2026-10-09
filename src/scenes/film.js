@@ -329,13 +329,11 @@ function iosScreen(t) {
   PLT.label(a > .9 ? 'appname' : null, 'NS Marks The Spot', c[0], c[1] + s / 2 + 44 * U, { family: 'Space Grotesk', weight: 500, size: 28 * U, align: 'center', alpha: a });
 }
 // The phone takes, as clips with a wipe between steps. r78-field is one session (R7 then R8); r9-poker is Poker.
-// Left out on purpose: R7's zoom from 4.5 to 6.4 s (the software renderer draws the location dot at full map scale
-// until the zoom settles), R8's blank frame mid-scroll (~21 s), and R9's typing (0.5-1.9 s), whose suggestion list
-// shows other real addresses.
+// Left out on purpose: R8's scroll to the layer list (~20-21.5 s), and R9's typing (0.5-1.9 s), whose suggestion
+// list shows other real addresses.
 const PF = [[0, [0, 0, 1170]]], R78 = 'r78-field', R9 = 'r9-poker';
 const TAKES_P = [
-  { t0: 66.75, name: R78, T: [[67.0, 0], [67.6, .75], [68.0, 1.1], [68.3, 2.6], [68.5, 3.0], [69.2, 4.4]], C: PF },
-  { t0: 69.25, name: R78, T: [[69.05, 6.5], [70.5, 6.85]], C: PF },
+  { t0: 66.75, name: R78, T: [[67.0, 0], [67.6, .75], [68.0, 1.1], [68.3, 2.6], [68.5, 3.0], [69.1, 4.25], [69.35, 4.6], [70.5, 6.85]], C: PF },
   { t0: 70.3, name: R78, T: [[70.1, 6.85], [71.6, 7.7]], C: PF },                          // a point
   { t0: 71.75, name: R78, T: [[71.55, 10.4], [72.4, 12.4], [72.6, 13.1]], C: PF },         // a photo
   { t0: 72.75, name: R78, T: [[72.55, 15.5], [73.75, 19.4]], C: PF },                      // a track

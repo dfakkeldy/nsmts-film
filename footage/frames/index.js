@@ -26,7 +26,7 @@ const FOOTAGE = {
   "h": 1080
  },
  "r6-export": {
-  "frames": 491,
+  "frames": 494,
   "w": 1920,
   "h": 1080
  },
