@@ -122,3 +122,30 @@ Mabou (46.09 N) without a gap. The highlands framing stays, since Mabou village 
 - **ElevenLabs terms**: Dan's plan allows commercial use of the narration.
 - **Province imagery**: the permission covers the portfolio video; the end card keeps "Province of Nova Scotia
   (licensed services)".
+
+## The free line, and where the film is posted (Dan, 2026-10-09)
+
+- **End card line**: Dan asked for the film to say the map is completely free, with no cookies. The end card now
+  carries "COMPLETELY FREE · NO ACCOUNT · NO COOKIES · NO ADS" under the links, fading in at 96.9 s
+  (`src/scenes/film.js`). Each claim was checked on the live site that day: the site's pages set no cookies and
+  `document.cookie` is empty after the map loads in a clean browser; the app has no accounts (`web/README.md` in the
+  app repo); no ad services are among the page's requests.
+- **No "no tracking"**: the map page loaded Cloudflare Web Analytics, injected at the edge (cookieless, but
+  third-party analytics, against the privacy policy's "We do not use third-party analytics trackers"). Dan had it
+  switched off for kinnokilabs.com and kinnokilabs.ca the same day (Web Analytics site settings, enabled off); a
+  browser request afterwards no longer gets the beacon. The posts still don't claim "no tracking".
+- **Re-render**: frames 2848-3039 (the end card after the last page turn) at 4 sub-frames over the full render;
+  delivery checks all ok: 101.334 s, 3040 frames, BT.709, -14.0 LUFS and -2.4 dBTP after AAC, no black, nothing
+  frozen (the line's fade-in breaks the end card's last hold).
+- **Fletcher scans' licence** (CC BY-NC-SA 3.0, permission recorded for the free web map): raised before posting,
+  since a portfolio film can read as promotional use; Dan went ahead. The YouTube description carries the end card's
+  credit lines.
+- **Posted**, the 1080p file unless noted:
+  - LinkedIn: https://www.linkedin.com/feed/update/urn:li:activity:7514416616537964545/ (a post of the first cut,
+    minutes old, was deleted and replaced). LinkedIn added auto-captions to its copy; the film's captions are
+    burned in, so they can be removed under Edit captions.
+  - YouTube, public: https://youtu.be/fQxaVyhhdRM
+  - X: https://x.com/DFakkeldy/status/2108652005636083782
+  - Facebook: not yet; the native upload stalled in the browser (it never posted), so it gets a link post to the
+    YouTube video instead.
+  - Bluesky: not yet; the account needs its email verified before it can post.
