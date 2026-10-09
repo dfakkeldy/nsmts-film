@@ -406,7 +406,7 @@ function endCard(t) {
 const CREDITS = [
   "Hugh Fletcher's sheets: David Rumsey Map Collection, David Rumsey Map Center, Stanford Libraries · CC BY-NC-SA 3.0",
   'Contains information licensed under the Open Government Licence – Nova Scotia · Province of Nova Scotia (licensed services)',
-  '© OpenStreetMap contributors · Outline: Natural Earth · Voice: an ElevenLabs clone of Dan Fakkeldy\'s voice',
+  '© OpenStreetMap contributors · Outline: Natural Earth',
 ];
 function credits(t) {
   const a = seg(t, 91.6, 92.2); if (a <= 0) return;

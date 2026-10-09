@@ -32,9 +32,7 @@ were step-captured: one screenshot per recorded frame, with the page running in 
 - **GeoPDF import** (R7): PDF.js 6, which the import uses, calls `Map.prototype.getOrInsertComputed`; this
   container's Chromium 141 predates it, so the import failed here with "This PDF could not be read". Current
   browsers ship the method. The recording adds the standard behaviour of that one method to the app's scripts as
-  they load (`capture/shim-upsert.mjs`); nothing else changes. **Please check GeoPDF import on your own iPhone**: if
-  iOS Safari lacks the method, the import fails there for real users, and the line "Bring GeoPDFs in too" needs a fix
-  in the app first.
+  they load (`capture/shim-upsert.mjs`); nothing else changes. Dan confirmed GeoPDF import works on his iPhone.
 - **3D terrain** (R3): recorded with the browser cache off. With the cache on, tiles the 2D map had already loaded fail
   in 3D (see "Site issues" below).
 - **Cuts inside takes**: R6's wait between framing and the dialog; R7's zoom (the software renderer draws the
@@ -68,10 +66,10 @@ were step-captured: one screenshot per recorded frame, with the page running in 
 3. `/vendor/pdfjs/6.1.200/standard_fonts/*.pfb` return 404 on the live site (the `.ttf` files load). PDF.js falls
    back without them; it didn't affect the import here.
 
-## Open questions for Dan
+## Decisions (Dan, 2026-10-09)
 
-- **Voice credit**: the end card says "Voice: an ElevenLabs clone of Dan Fakkeldy's voice". Keep, shorten, or drop?
-- **ElevenLabs terms**: confirm your plan allows commercial use of the narration before the film is published.
-- **Province imagery in a published video**: R1 and R9 show NS Aerial and NSPRD parcels. The app's licence notice
-  reads "Reproduced and distributed with the permission of the Department of Service Nova Scotia"; the end card
-  carries "Province of Nova Scotia (licensed services)". Confirm the permission covers a portfolio video.
+- **GeoPDF import on iPhone**: works on Dan's iPhone, so "Bring GeoPDFs in too" stands.
+- **Voice credit**: dropped from the end card.
+- **ElevenLabs terms**: Dan's plan allows commercial use of the narration.
+- **Province imagery**: the permission covers the portfolio video; the end card keeps "Province of Nova Scotia
+  (licensed services)".
