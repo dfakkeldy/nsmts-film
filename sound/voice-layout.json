@@ -1,0 +1,24 @@
+{
+ "segments": [
+  {
+   "from_word": 0,
+   "offset": 0.4
+  },
+  {
+   "from_word": 33,
+   "offset": 2.773
+  },
+  {
+   "from_word": 170,
+   "offset": 3.773
+  },
+  {
+   "from_word": 229,
+   "offset": 4.273
+  },
+  {
+   "from_word": 262,
+   "offset": 4.773
+  }
+ ]
+}
