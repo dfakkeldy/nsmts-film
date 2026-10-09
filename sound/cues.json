@@ -1,0 +1,276 @@
+{
+ "fps": 30,
+ "duration": 96,
+ "bpm": 90,
+ "offset": 0,
+ "meter": 4,
+ "key": "D major",
+ "cues": [
+  {
+   "t": 9.85,
+   "kind": "tick",
+   "weight": 1,
+   "pan": 0,
+   "f": 296
+  },
+  {
+   "t": 10.5,
+   "kind": "swish",
+   "weight": 0.35,
+   "pan": 0,
+   "f": 315
+  },
+  {
+   "t": 10.6,
+   "kind": "tick",
+   "weight": 0.7,
+   "pan": 0,
+   "f": 318
+  },
+  {
+   "t": 13.4,
+   "kind": "swish",
+   "weight": 0.35,
+   "pan": 0,
+   "f": 402
+  },
+  {
+   "t": 15.6,
+   "kind": "tick",
+   "weight": 0.6,
+   "pan": 0,
+   "f": 468
+  },
+  {
+   "t": 16.91,
+   "kind": "tick",
+   "weight": 0.3,
+   "pan": 0,
+   "f": 507
+  },
+  {
+   "t": 18.75,
+   "kind": "tick",
+   "weight": 0.3,
+   "pan": 0,
+   "f": 563
+  },
+  {
+   "t": 19.99,
+   "kind": "tick",
+   "weight": 0.3,
+   "pan": 0,
+   "f": 600
+  },
+  {
+   "t": 20.47,
+   "kind": "tick",
+   "weight": 0.3,
+   "pan": 0,
+   "f": 614
+  },
+  {
+   "t": 27,
+   "kind": "pop",
+   "weight": 0.45,
+   "pan": 0,
+   "f": 810
+  },
+  {
+   "t": 30.6,
+   "kind": "swish",
+   "weight": 0.35,
+   "pan": 0,
+   "f": 918
+  },
+  {
+   "t": 38.45,
+   "kind": "land",
+   "weight": 0.3,
+   "pan": 0,
+   "f": 1154
+  },
+  {
+   "t": 39.6,
+   "kind": "swish",
+   "weight": 0.35,
+   "pan": 0,
+   "f": 1188
+  },
+  {
+   "t": 41.95,
+   "kind": "drop",
+   "weight": 0.4,
+   "pan": 0,
+   "f": 1259
+  },
+  {
+   "t": 42.97,
+   "kind": "tick",
+   "weight": 0.35,
+   "pan": 0,
+   "f": 1289
+  },
+  {
+   "t": 43.2,
+   "kind": "tick",
+   "weight": 0.35,
+   "pan": 0,
+   "f": 1296
+  },
+  {
+   "t": 43.43,
+   "kind": "tick",
+   "weight": 0.35,
+   "pan": 0,
+   "f": 1303
+  },
+  {
+   "t": 44.1,
+   "kind": "whoosh",
+   "weight": 0.3,
+   "pan": 0,
+   "f": 1323
+  },
+  {
+   "t": 45.8,
+   "kind": "swish",
+   "weight": 0.35,
+   "pan": 0,
+   "f": 1374
+  },
+  {
+   "t": 48.25,
+   "kind": "land",
+   "weight": 0.3,
+   "pan": 0,
+   "f": 1448
+  },
+  {
+   "t": 53.85,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 1616
+  },
+  {
+   "t": 57.4,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 1722
+  },
+  {
+   "t": 60.8,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 1824
+  },
+  {
+   "t": 64,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 1920
+  },
+  {
+   "t": 64.95,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 1949
+  },
+  {
+   "t": 66.8,
+   "kind": "swish",
+   "weight": 0.35,
+   "pan": 0,
+   "f": 2004
+  },
+  {
+   "t": 69.05,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 2072
+  },
+  {
+   "t": 70.1,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 2103
+  },
+  {
+   "t": 71.55,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 2147
+  },
+  {
+   "t": 72.55,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 2177
+  },
+  {
+   "t": 73.7,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 2211
+  },
+  {
+   "t": 75.9,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 2277
+  },
+  {
+   "t": 77.25,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 2318
+  },
+  {
+   "t": 81.7,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 2451
+  },
+  {
+   "t": 86,
+   "kind": "swish",
+   "weight": 0.2,
+   "pan": 0,
+   "f": 2580
+  },
+  {
+   "t": 89,
+   "kind": "swish",
+   "weight": 0.35,
+   "pan": 0,
+   "f": 2670
+  },
+  {
+   "t": 89.4,
+   "kind": "tick",
+   "weight": 1,
+   "pan": 0,
+   "f": 2682
+  },
+  {
+   "t": 89.9,
+   "kind": "chime",
+   "weight": 0.6,
+   "pan": 0,
+   "f": 2697
+  }
+ ]
+}

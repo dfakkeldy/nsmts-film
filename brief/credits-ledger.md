@@ -13,3 +13,12 @@ Every file not made by code: source, licence or terms, cost, date.
 | 2026-10-09 | sound/elevenlabs/narration-v1.2.wav (84.1 s; not in git) | Take 1 with the Poker paragraph replaced by poker-v1.2 at the quiet gaps (-1.3 dB to match); points in sound/words/v1.2-splice.json | as v1 | none |
 | 2026-10-09 | assets/scans/Fletcher sheet 16, Mabou (1884).jpg (3000 x 2087) | David Rumsey Map Collection IIIF, RUMSEY~8~1~2641~290009, full/3000,/0/default.jpg | CC BY-NC-SA 3.0; David Rumsey Map Collection, David Rumsey Map Center, Stanford University Libraries; project permission for georeferencing in the free web map (docs/FLETCHER_GEOREFERENCING.md) | none |
 | 2026-10-09 | assets/scans/Fletcher sheet 16 points.csv | ns-marks-the-spot tools/fletcher/gcps/sheet-16.csv, pixel coordinates scaled by 0.277213 to the 3000 px download | project data (MIT code repo) | none |
+
+## 2026-10-09: field-log photo (R8)
+
+| File | Source | Licence | Cost |
+|---|---|---|---|
+| `assets/photos/church-of-mabou.jpg` | "Church of Mabou, Nova Scotia, Canada.JPG", Miguel Tremblay, Wikimedia Commons (1280 px thumbnail, taken 2014-06-23) | CC0 1.0 | free |
+
+GPS EXIF added from the file's recorded camera location on Commons (46.073007 N, 61.394436 W) and its capture time
+(2014:06:23 21:12:31), so "Add photos to map" places it where it was taken. No people or marks in frame.

@@ -178,7 +178,7 @@ const h = {
     await during(page.evaluate((name, sel) => {
       for (const e of document.querySelectorAll(sel)) {
         const r = e.getBoundingClientRect(); if (!r.width) continue;
-        if ((e.innerText ?? "").trim() === name || e.getAttribute("aria-label") === name) return [Math.round(r.x + r.width / 2), Math.round(r.y + r.height / 2)];
+        if ((e.innerText ?? "").replace(/\s+/g, " ").trim() === name || e.getAttribute("aria-label") === name) return [Math.round(r.x + r.width / 2), Math.round(r.y + r.height / 2)];
       }
       return null;
     }, name, selector).then((v) => (res = v)));

@@ -38,7 +38,13 @@ await page.setViewport(view);
 if (phone) await page.setUserAgent("Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1");
 if (opt.geolocation) await page.setGeolocation(opt.geolocation);
 if (opt.noCache) await page.setCacheEnabled(false);
+// Local storage set before the app starts (e.g. the Province licence already accepted), and any scenario setup
+// (e.g. capture/shim-upsert.mjs) before the first load.
+if (opt.storage) await page.evaluateOnNewDocument((kv) => { try { for (const [k, v] of Object.entries(kv)) localStorage.setItem(k, v); } catch {} }, opt.storage);
+if (opt.setup) await opt.setup(page);
 page.on("pageerror", (e) => console.log("pageerror:", e.message));
+page.on("requestfailed", (r) => { const u = r.url(); if (!u.startsWith("data:")) log("request failed:", u.slice(0, 140), r.failure()?.errorText); });
+page.on("response", (r) => { if (r.status() >= 400) log("http", r.status(), r.url().slice(0, 140)); });
 await page.evaluateOnNewDocument((isPhone) => {
   addEventListener("DOMContentLoaded", () => {
     const d = document.createElement("div");
@@ -127,7 +133,7 @@ const h = {
   find: (name, selector = "button, [role=button]") => page.evaluate((name, sel) => {
     for (const e of document.querySelectorAll(sel)) {
       const r = e.getBoundingClientRect(); if (!r.width) continue;
-      if ((e.innerText ?? "").trim() === name || e.getAttribute("aria-label") === name) return [Math.round(r.x + r.width / 2), Math.round(r.y + r.height / 2)];
+      if ((e.innerText ?? "").replace(/\s+/g, " ").trim() === name || e.getAttribute("aria-label") === name) return [Math.round(r.x + r.width / 2), Math.round(r.y + r.height / 2)];
     }
     return null;
   }, name, selector),

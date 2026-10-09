@@ -8,7 +8,7 @@ const INK = PLT.S.ink, RED = PLT.S.red, GRA = PLT.S.graphite, PAPER = PLT.S.pape
 
 // ---------- the plan ----------
 // Pages slide across the fixed paper (a turn); SLIDES[k] is when page k leaves and page k + 1 arrives.
-const SLIDES = [10.45, 13.0, 30.55, 39.55, 45.75, 66.75, 88.95], SLIDE = .6;
+const SLIDES = [10.45, 13.35, 30.55, 39.55, 45.75, 66.75, 88.95], SLIDE = .6;
 const WIN = [300, 118, 1320, 742];                       // the desktop window (16:9, the takes' aspect)
 const SCR = [W / 2 - 171.5, 118, 343, 742];               // the phone's screen (390 x 844 points, scaled)
 const WIPE = .4;                                          // a take change inside a window
@@ -112,8 +112,8 @@ async function footLens(name, tl, crop, box, at, r, mag, o = {}) {
 }
 // a loupe that glides in from below right and settles; with t1, it lifts and leaves the way it came from t1
 const glide = (t, t0, t1 = Infinity) => {
-  const k = EASE.glide(seg(t, t0, t0 + .55)) - EASE.exit(seg(t, t1, t1 + .45));
-  return { alpha: Math.min(seg(t, t0, t0 + .2), 1 - seg(t, t1 + .25, t1 + .45)), dx: (1 - k) * 220 * U, dy: (1 - k) * 160 * U, lift: lerp(.9, .2, k) };
+  const out = isFinite(t1) ? seg(t, t1, t1 + .45) : 0, k = EASE.glide(seg(t, t0, t0 + .55)) - EASE.exit(out);
+  return { alpha: Math.min(seg(t, t0, t0 + .2), 1 - (isFinite(t1) ? seg(t, t1 + .25, t1 + .45) : 0)), dx: (1 - k) * 220 * U, dy: (1 - k) * 160 * U, lift: lerp(.9, .2, k) };
 };
 
 // a take, or its placeholder while it is still to record
@@ -161,13 +161,11 @@ function coldOpen(t) {
 
 // ---------- page 1: the title (10.45-13.0) ----------
 function titlePage(t) {
-  mark([W / 2, 372 * U], 30 * U, seg(t, 10.85, 11.55));
-  const a = EASE.punch(seg(t, 11.0, 11.6));
-  PLT.label(a > .9 ? 'title' : null, 'NS Marks The Spot', W / 2, 545 * U, { size: 116 * U, weight: 500, align: 'center', alpha: a, blur: (1 - a) * 12 });
-  const r = EASE.inOut(seg(t, 11.45, 12.0)) * 330 * U;
-  if (r > 1) line([[W / 2 - r, 590 * U], [W / 2 + r, 590 * U]], GRA, 1.2 * U);
-  const b = EASE.punch(seg(t, 11.8, 12.35));
-  PLT.label(b > .9 ? 'sub' : null, 'A screening and research map of Nova Scotia', W / 2, 650 * U, { size: 38 * U, align: 'center', color: INK, alpha: b, blur: (1 - b) * 8 });
+  mark([W / 2, 380 * U], 32 * U, seg(t, 10.6, 11.3));
+  const a = EASE.punch(seg(t, 10.7, 11.2));
+  PLT.label(a > .9 ? 'title' : null, 'NS Marks The Spot', W / 2, 560 * U, { size: 124 * U, weight: 500, align: 'center', alpha: a, blur: (1 - a) * 12 });
+  const r = EASE.inOut(seg(t, 11.2, 11.8)) * 360 * U;
+  if (r > 1) line([[W / 2 - r, 610 * U], [W / 2 + r, 610 * U]], GRA, 1.2 * U);
 }
 
 // ---------- page 2: where the data lives (13.0-30.55) ----------
@@ -329,21 +327,61 @@ function iosScreen(t) {
   CX.drawImage(IM.icon, c[0] - s / 2, c[1] - s / 2, s, s); CX.restore();
   PLT.label(a > .9 ? 'appname' : null, 'NS Marks The Spot', c[0], c[1] + s / 2 + 44 * U, { family: 'Space Grotesk', weight: 500, size: 28 * U, align: 'center', alpha: a });
 }
+// The phone takes, as clips with a wipe between steps. r78-field is one session (R7 then R8); r9-poker is Poker.
+// Left out on purpose: R7's zoom from 4.5 to 6.4 s (the software renderer draws the location dot at full map scale
+// until the zoom settles), R8's blank frame mid-scroll (~21 s), and R9's typing (0.5-1.9 s), whose suggestion list
+// shows other real addresses.
+const PF = [[0, [0, 0, 1170]]], R78 = 'r78-field', R9 = 'r9-poker';
 const TAKES_P = [
-  { t0: 66.75, name: 'r7-geopdf', T: [[67.0, .3], [70.5, 3.8]], C: [[0, [0, 0, 1170]]] },
-  { t0: 70.3, name: 'r8-fieldlog', T: [[70.1, .3], [76.3, 6.5]], C: [[0, [0, 0, 1170]]] },
-  { t0: 76.1, name: 'r9-poker', T: [[75.9, .3], [86.4, 10.8]], C: [[0, [0, 0, 1170]]] },
+  { t0: 66.75, name: R78, T: [[67.0, 0], [67.6, .75], [68.0, 1.1], [68.3, 2.6], [68.5, 3.0], [69.2, 4.4]], C: PF },
+  { t0: 69.25, name: R78, T: [[69.05, 6.5], [70.5, 6.85]], C: PF },
+  { t0: 70.3, name: R78, T: [[70.1, 6.85], [71.6, 7.7]], C: PF },                          // a point
+  { t0: 71.75, name: R78, T: [[71.55, 10.4], [72.4, 12.4], [72.6, 13.1]], C: PF },         // a photo
+  { t0: 72.75, name: R78, T: [[72.55, 15.5], [73.75, 19.4]], C: PF },                      // a track
+  { t0: 73.9, name: R78, T: [[73.7, 21.6], [76.3, 23.9]], C: PF },                         // the layers, and export
+  { t0: 76.1, name: R9, T: [[76.0, 0], [77.3, .45]], C: PF },
+  { t0: 77.45, name: R9, T: [[77.25, 1.95], [78.2, 2.5], [78.95, 2.95], [79.6, 4.6], [80.3, 6.2], [81.0, 8.0], [81.75, 9.9]], C: PF, blur: [4.75, 10.45] },
+  { t0: 81.9, name: R9, T: [[81.7, 10.5], [83.6, 12.3], [86.4, 14.85]], C: PF },           // offline
   { t0: 86.2, draw: (t) => iosScreen(t) },
 ];
+// Neighbours' civic numbers on the aerial (take pixels, centres): blurred while the aerial is on. 5471 stays.
+const R9_LABELS = [[1102, 432, 4], [324, 824, 4], [240, 1200, 2], [94, 1510, 2], [438, 1542, 2], [426, 1672, 2], [838, 1676, 4], [124, 1676, 2],
+  [438, 1814, 2], [156, 1868, 2], [860, 1886, 4], [418, 1952, 2], [116, 2020, 2], [422, 2094, 2], [714, 2110, 4], [428, 2204, 2], [440, 2444, 2],
+  [738, 2450, 4], [456, 2514, 2]];
+const PK = SCR[2] / 1170, phonePt = ([x, y]) => [SCR[0] + x * PK, SCR[1] + y * PK];
+async function blurLabels(c, t) {
+  if (!c.blur || !hasTake(c.name)) return; const tl = takeTime(t, c.T); if (tl < c.blur[0] || tl > c.blur[1]) return;
+  for (const [x, y, n] of R9_LABELS) {
+    const w = n === 4 ? 112 : 70, h = 62, a = phonePt([x - w / 2, y - h / 2]);
+    CX.save(); CX.filter = `blur(${(5 * U).toFixed(1)}px)`;
+    await footage(c.name, tl, [a[0] - 3, a[1] - 3, w * PK + 6, h * PK + 6], { crop: [x - w / 2 - 10, y - h / 2 - 10, w + 20, h + 20] });
+    CX.restore();
+  }
+}
 async function phonePage(t) {
   CX.save(); rr(SCR[0], SCR[1], SCR[2], SCR[3], 38 * U); CX.clip();
   await clips(t, TAKES_P, SCR);
+  const c = clipAt(t, TAKES_P); await blurLabels(c, t);
   CX.restore();
   phoneBody();
+  // notes beside the phone: each a leader from the thing on the screen to an engraved label
+  const note = (id, str, at, y, t0, t1, o = {}) => {
+    const p = seg(t, t0, t0 + .7) * (1 - seg(t, t1, t1 + .25)); if (p <= 0) return;
+    PLT.leader(null, '', at, [1210 * U, y], Math.min(p, 1), { label: false, shelf: 26 * U, col: o.col });
+    const a = EASE.punch(seg(t, t0 + .35, t0 + .8)) * (1 - seg(t, t1, t1 + .25));
+    PLT.label(a > .9 ? id : null, str, 1250 * U, y + 11 * U, { size: 34 * U, alpha: a, blur: (1 - Math.min(1, a)) * 8 });
+    if (o.sub) PLT.label(a > .9 ? id + 's' : null, o.sub, 1250 * U, y + 52 * U, { weight: 600, size: 28 * U, tracking: 2 * U, color: RED, alpha: a });
+  };
+  // (the dot holds its place into the next step, and the trace its place through the offline reload)
+  note('you', 'You are here,', phonePt([585, 1263]), 470 * U, 69.2, 71.95, { sub: 'ON THE 1884 SHEET' });
+  note('drive', 'Driveway: 36.2 m', phonePt([1035, 1150]), 420 * U, 80.55, 83.0);
+  const off = seg(t, 81.75, 82.1) * (1 - seg(t, 86.0, 86.2));
+  if (off > 0) PLT.label(off > .9 ? 'netoff' : null, 'Network off (airplane mode)', 1250 * U, 250 * U, { family: 'Space Grotesk', weight: 500, size: 28 * U, color: GRA, alpha: off });
+  note('offline', 'Offline · Atlas', phonePt([870, 2463]), 700 * U, 83.0, 86.0, { sub: 'THE SAVED COPY' });
   // the app, annotated once it is on the screen
-  const p = seg(t, 86.7, 87.5);
+  const p = seg(t, 86.4, 87.2);
   if (p > 0) {
-    const lp = PLT.leader(null, '', [W / 2 + 96 * U, 360 * U], [1320 * U, 300 * U], p, { label: false, shelf: 28 * U });
+    PLT.leader(null, '', [W / 2 + 96 * U, 360 * U], [1320 * U, 300 * U], p, { label: false, shelf: 28 * U });
     const a = EASE.punch(seg(p, .55, 1));
     PLT.label(a > .9 ? 'native' : null, 'Native iPhone app', 1360 * U, 312 * U, { size: 36 * U, alpha: a, blur: (1 - a) * 8 });
     PLT.label(a > .9 ? 'tf' : null, 'IN TESTFLIGHT', 1360 * U, 356 * U, { weight: 600, size: 28 * U, tracking: 2.5 * U, color: RED, alpha: a });
@@ -406,7 +444,8 @@ async function film(t) {
   PLT.paper();
   for (let k = 0; k < PAGES.length; k++) {
     const dx = pageDx(t, k); if (dx == null || Math.abs(dx) >= W) continue;
-    CX.save(); CX.translate(dx, 0); await PAGES[k](t); CX.restore();
+    // a page in mid-turn is not there to be read: its text is left out of the readability checks
+    const mk = textsMark(); CX.save(); CX.translate(dx, 0); await PAGES[k](t); CX.restore(); if (dx !== 0) textsDrop(mk);
   }
   PLT.margins();
   figCaption(t, FIGS, { x: 470 * U, y: 86 * U, size: 40 * U });
@@ -419,7 +458,7 @@ shots([[0, (t) => film(t)]]);
 // ---------- sound cues, from the same times ----------
 SLIDES.forEach(s => cue(s + .05, 'swish', { weight: .35 }));
 [...TAKES_B.slice(1), ...TAKES_P.slice(1)].forEach(c => cue(c.t0 - WIPE / 2, 'swish', { weight: .2 }));
-cue(9.85, 'tick'); cue(10.85, 'tick', { weight: .7 }); cue(15.6, 'tick', { weight: .6 });
+cue(9.85, 'tick'); cue(10.6, 'tick', { weight: .7 }); cue(15.6, 'tick', { weight: .6 });
 ENDS.forEach(e => cue(e.t - .1, 'tick', { weight: .3 }));
 cue(27.0, 'pop', { weight: .45 });
 cue(38.45, 'land', { weight: .3 }); cue(48.25, 'land', { weight: .3 });
