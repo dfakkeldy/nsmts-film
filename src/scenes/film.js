@@ -435,6 +435,9 @@ function endCard(t) {
   }
   const c = EASE.punch(seg(t, 91.33, 91.8));
   PLT.label(c > .9 ? 'links' : null, 'kinnokilabs.com   ·   kinnokilabs.com/map', W / 2, 776 * U, { family: 'Space Grotesk', weight: 600, size: 42 * U, align: 'center', alpha: c, blur: (1 - c) * 8 });
+  // checked on the live site 2026-10-09: no cookies set, no accounts (web/README), no ad services loaded
+  const e = EASE.punch(seg(t, 91.55, 92));
+  PLT.label(e > .9 ? 'free' : null, 'COMPLETELY FREE  ·  NO ACCOUNT  ·  NO COOKIES  ·  NO ADS', W / 2, 846 * U, { weight: 600, size: 28 * U, tracking: 2.5 * U, color: RED, align: 'center', alpha: e });
 }
 const CREDITS = [
   "Hugh Fletcher's sheets: David Rumsey Map Collection, David Rumsey Map Center, Stanford Libraries · CC BY-NC-SA 3.0",
