@@ -65,10 +65,13 @@ were step-captured: one screenshot per recorded frame, with the page running in 
    leaf-26 failed to load · Retry 3D"). Fix: `crossOrigin: 'anonymous'` on the Fletcher tile layers
    (`web/src/components/FletcherTileLayer.tsx`, `FletcherFullSheetsPreview.tsx`), or `Vary: Origin` on every tile
    response.
+   *Fixed in ns-marks-the-spot #586 (`Vary: Origin` on tile responses; the 3D reader re-fetches tiles a non-CORS 2D
+   layer cached). Live: the site's source.json receipt names b316d81e, checked 2026-10-09.*
 2. **GeoPDF import needs `Map.prototype.getOrInsertComputed`** (above): worth a polyfill in the app for older
    browsers.
-3. `/vendor/pdfjs/6.1.200/standard_fonts/*.pfb` return 404 on the live site (the `.ttf` files load). PDF.js falls
-   back without them; it didn't affect the import here.
+3. *Withdrawn.* An earlier note here said PDF.js's `.pfb` standard fonts return 404 on the live site. They don't: all
+   16 files that pdfjs-dist 6.1.200 ships return 200 (checked 2026-10-09). The 404s came from testing font names from
+   older PDF.js versions (`FoxitSans.pfb`), which 6.1.200 neither ships nor requests.
 
 ## The move to the Mabou Highlands (Dan, 2026-10-09)
 
