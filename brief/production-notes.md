@@ -103,6 +103,11 @@ frame-controlled capture renders more slowly than real time, so the take jumps f
 film draws the zoom as Leaflet does: the zoom-14 picture scaled 2x about the mark over 0.3 s (Leaflet's curve), then
 the zoom-15 frames, cropped to the same ground.
 
+The line, "Here's something interesting. Did you know there was a gold mine near Glendale?", is take 1 of four in
+Dan's cloned voice (credits ledger), placed at 57.95 s: "interesting" falls on the zoom, the popup opens on "Did you
+know". On 2026-10-09 Dan reported the gap fix live; a fresh browser on the live site shows the sheet 16/14 join near
+Mabou (46.09 N) without a gap. The highlands framing stays, since Mabou village itself sits in the green-striped unit.
+
 ## Decisions (Dan, 2026-10-09)
 
 - **GeoPDF import on iPhone**: works on Dan's iPhone, so "Bring GeoPDFs in too" stands.

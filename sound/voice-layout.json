@@ -25,7 +25,8 @@
   {
    "file": "sound/elevenlabs/goldmine-v1.wav",
    "words": "sound/words/goldmine-v1.json",
-   "at": 57.95
+   "at": 57.95,
+   "gain_db": -0.5
   }
  ]
 }

@@ -1,0 +1,70 @@
+{
+ "source": "sound/elevenlabs/goldmine-v1-take1.mp3 (ElevenLabs eleven_v4, Dan's own cloned voice), words by ElevenLabs speech to text (eleven_scribe_v1); the last word ends where the speech does (3.86 s, measured)",
+ "words": [
+  {
+   "w": "Here's",
+   "start": 0,
+   "end": 0.347
+  },
+  {
+   "w": "something",
+   "start": 0.453,
+   "end": 0.56
+  },
+  {
+   "w": "interesting.",
+   "start": 0.64,
+   "end": 1.2
+  },
+  {
+   "w": "Did",
+   "start": 1.68,
+   "end": 1.84
+  },
+  {
+   "w": "you",
+   "start": 1.88,
+   "end": 1.92
+  },
+  {
+   "w": "know",
+   "start": 2,
+   "end": 2.08
+  },
+  {
+   "w": "there",
+   "start": 2.16,
+   "end": 2.24
+  },
+  {
+   "w": "was",
+   "start": 2.28,
+   "end": 2.32
+  },
+  {
+   "w": "a",
+   "start": 2.4,
+   "end": 2.48
+  },
+  {
+   "w": "gold",
+   "start": 2.56,
+   "end": 2.8
+  },
+  {
+   "w": "mine",
+   "start": 2.88,
+   "end": 3.12
+  },
+  {
+   "w": "near",
+   "start": 3.2,
+   "end": 3.28
+  },
+  {
+   "w": "Glendale?",
+   "start": 3.36,
+   "end": 3.86
+  }
+ ]
+}
