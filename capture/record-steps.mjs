@@ -7,7 +7,7 @@
 // to update, then a screenshot, which becomes exactly one frame at 30 fps. A wait of s seconds keeps capturing
 // real time for s seconds and spreads what it caught over s x 30 frames, so a change during a wait still shows,
 // just without in-between motion. Same scenario API as record-vt.mjs (load, settle, start, wait, moveTo, click,
-// drag, type, press, during, frame, nearest, aria); nothing on the page is changed except an injected pointer.
+// drag, type, press, during, frame, nearest, aria, find); nothing on the page is changed except an injected pointer.
 import puppeteer from "puppeteer-core";
 import { mkdirSync, writeFileSync, rmSync, copyFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
@@ -37,6 +37,7 @@ const page = await context.newPage();
 await page.setViewport(view);
 if (phone) await page.setUserAgent("Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1");
 if (opt.geolocation) await page.setGeolocation(opt.geolocation);
+if (opt.noCache) await page.setCacheEnabled(false);
 page.on("pageerror", (e) => console.log("pageerror:", e.message));
 await page.evaluateOnNewDocument((isPhone) => {
   addEventListener("DOMContentLoaded", () => {
@@ -122,6 +123,14 @@ const h = {
     }, x, y, selector, r);
   },
   aria: (role, name) => page.$(`::-p-aria([name="${name}"][role="${role}"])`),
+  // Centre of the first visible button whose text or aria-label is exactly `name`, or null (as record-vt.mjs).
+  find: (name, selector = "button, [role=button]") => page.evaluate((name, sel) => {
+    for (const e of document.querySelectorAll(sel)) {
+      const r = e.getBoundingClientRect(); if (!r.width) continue;
+      if ((e.innerText ?? "").trim() === name || e.getAttribute("aria-label") === name) return [Math.round(r.x + r.width / 2), Math.round(r.y + r.height / 2)];
+    }
+    return null;
+  }, name, selector),
 };
 
 try { await scenario.run(page, h); } finally { await browser.close(); }

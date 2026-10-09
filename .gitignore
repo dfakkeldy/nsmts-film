@@ -13,3 +13,5 @@ footage/.vt-*/
 footage/.steps-*/
 footage/.frames-*/
 capture/*.log
+footage/frames/*/
+capture/logs/

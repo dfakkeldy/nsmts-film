@@ -42,6 +42,9 @@ const page = await target.page();
 await page.setViewport(view);
 if (phone) await page.setUserAgent("Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1");
 if (opt.geolocation) await page.setGeolocation(opt.geolocation);
+// The 3D view fetches tiles with CORS; a copy cached earlier by the 2D map's plain <img> load lacks the CORS header
+// (the tile server omits `Vary: Origin` when no Origin is sent), so a take that turns 3D on can bypass the cache.
+if (opt.noCache) await page.setCacheEnabled(false);
 page.on("pageerror", (e) => console.log("pageerror:", e.message));
 // Local storage set before the app starts (e.g. the Province licence already accepted), so no modal opens: modal
 // <dialog>s stall frame-controlled rendering.
@@ -168,6 +171,19 @@ const h = {
     return res;
   },
   async aria(role, name) { let el = null; await during(page.$(`::-p-aria([name="${name}"][role="${role}"])`).then((v) => (el = v))); return el; },
+  // Centre of the first visible button whose text or aria-label is exactly `name`, or null. A plain DOM lookup:
+  // accessibility-tree queries can hang on heavy pages under frame control.
+  async find(name, selector = "button, [role=button]") {
+    let res = null;
+    await during(page.evaluate((name, sel) => {
+      for (const e of document.querySelectorAll(sel)) {
+        const r = e.getBoundingClientRect(); if (!r.width) continue;
+        if ((e.innerText ?? "").trim() === name || e.getAttribute("aria-label") === name) return [Math.round(r.x + r.width / 2), Math.round(r.y + r.height / 2)];
+      }
+      return null;
+    }, name, selector).then((v) => (res = v)));
+    return res;
+  },
 };
 
 try {
