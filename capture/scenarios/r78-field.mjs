@@ -51,7 +51,7 @@ export async function run(page, h) {
   await tapName("×"); await h.wait(1.2);
   await tapName("Record a track"); await h.wait(0.4);
   for (let i = 1; i <= 10; i++) {    // walking north along the road, toward MacDonalds Glen
-    await page.setGeolocation({ latitude: HERE.latitude + i * 0.000416, longitude: HERE.longitude - i * 0.000026, accuracy: 5 });
+    await page.setGeolocation({ latitude: HERE.latitude + i * 0.00015, longitude: HERE.longitude - i * 0.00001, accuracy: 5 });   // ~17 m a step
     await h.wait(0.35);
   }
   await tapName("⌕ Search & layers"); await h.wait(0.6);
