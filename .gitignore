@@ -15,3 +15,4 @@ footage/.frames-*/
 capture/*.log
 footage/frames/*/
 capture/logs/
+sound/build/*.wav
