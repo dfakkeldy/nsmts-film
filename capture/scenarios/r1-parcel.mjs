@@ -1,10 +1,10 @@
 // R1: pick a public parcel (5471 Highway 19, Judique: the interpretive centre) by civic address search; the
 // parcel sheet fills in, then scrolls through buildings, assessment, civic address, roads, water and flood, where
 // sources that returned nothing say so.
+// The Province licence is already accepted in this browser (as on Dan's own devices), so no dialog opens.
+export const options = { storage: { "ns-marks-the-spot:province-license:v1": "accepted" } };
 export async function run(page, h) {
   await h.load("https://kinnokilabs.com/apps/nsmarksthespot/map/?basemap=day&taxSale=off&mode=current&layers=modern,ns-aerial,nsprd&position=45.878,-61.492,16", 6000);
-  const acc = await h.aria("button", "Accept and view map layers");
-  if (acc) { await h.during(acc.click()); }
   await h.settle(10000);
   await h.start();
   await h.wait(0.5);

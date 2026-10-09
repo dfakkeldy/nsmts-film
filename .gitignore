@@ -12,3 +12,4 @@ capture/downloads/
 footage/.vt-*/
 footage/.steps-*/
 footage/.frames-*/
+capture/*.log

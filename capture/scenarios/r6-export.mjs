@@ -1,13 +1,13 @@
 // R6: Export map (PDF) over Mabou with the Fletcher sheet on: frame the area, Continue, title it, Download PDF.
 import { mkdirSync } from "node:fs";
 import { resolve } from "node:path";
+// The Province licence is already accepted in this browser (as on Dan's own devices), so no dialog opens.
+export const options = { storage: { "ns-marks-the-spot:province-license:v1": "accepted" } };
 export async function run(page, h) {
   const dl = resolve("capture/downloads"); mkdirSync(dl, { recursive: true });
   const cdp = await page.createCDPSession();
   await cdp.send("Browser.setDownloadBehavior", { behavior: "allow", downloadPath: dl });
   await h.load("https://kinnokilabs.com/apps/nsmarksthespot/map/?basemap=day&taxSale=off&mode=current&layers=modern,fletcher&position=46.07,-61.39,13", 6000);
-  const acc = await h.aria("button", "Accept and view map layers");
-  if (acc) await h.during(acc.click());
   await h.settle(10000);
   await h.start();
   await h.wait(0.4);

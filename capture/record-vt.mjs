@@ -43,6 +43,9 @@ await page.setViewport(view);
 if (phone) await page.setUserAgent("Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1");
 if (opt.geolocation) await page.setGeolocation(opt.geolocation);
 page.on("pageerror", (e) => console.log("pageerror:", e.message));
+// Local storage set before the app starts (e.g. the Province licence already accepted), so no modal opens: modal
+// <dialog>s stall frame-controlled rendering.
+if (opt.storage) await page.evaluateOnNewDocument((kv) => { try { for (const [k, v] of Object.entries(kv)) localStorage.setItem(k, v); } catch {} }, opt.storage);
 await page.evaluateOnNewDocument((isPhone) => {
   addEventListener("DOMContentLoaded", () => {
     const d = document.createElement("div");
@@ -164,7 +167,7 @@ const h = {
     }, x, y, selector, r).then((v) => (res = v)));
     return res;
   },
-  aria: (role, name) => page.$(`::-p-aria([name="${name}"][role="${role}"])`),
+  async aria(role, name) { let el = null; await during(page.$(`::-p-aria([name="${name}"][role="${role}"])`).then((v) => (el = v))); return el; },
 };
 
 try {
