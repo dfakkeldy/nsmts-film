@@ -23,3 +23,5 @@ C9 (2026-10-08, staged address): "5471 highway 19" ... "Yeah 5471 is the interpr
 C10 (2026-10-08): "I know almost every address in the 3 postal codes so I don't need the app as much as I used to. New person starting next week will probably love it."
 
 C11 (2026-10-09, on narration v1): "I don't really think me bragging about knowing every address was necessary."
+
+C12 (2026-10-09, on narration v1.1): "all the takes sound exactly the same, but I still think the wording after the part you cut sounds like a weird way to say it, and now it's even weirder because I'm saying one day I couldn't find a house, and then I built it for who comes next. Figure out something better to say."

@@ -46,3 +46,18 @@ It's also a native iPhone app, in TestFlight.
 
 Dan (C11): cut "I know almost every address now." The audio is cut from the chosen v1 take at its word timings,
 not regenerated. Text: brief/narration-v1.1.txt.
+
+## v1.2 proposal (2026-10-09)
+
+Dan (C12): the anecdote followed by "I built it for whoever starts next" doesn't follow. All takes sound the same,
+so keep take 1 and re-record only the Poker paragraph, spliced in at the paragraph pauses.
+
+Proposed Poker paragraph (rests on C2 finds/measures, C3 no signal at work, C8 coworkers; offline checked live):
+"I also built a pocket map for my day job. It finds an address and measures the driveway. There's no signal at
+work, so it runs offline, and my coworkers use it too."
+
+Alternative that keeps the address check (C2): "...It finds an address and measures the driveway, and it runs
+offline, because there's no signal at work. When an address isn't in the list, I check the aerial for a house. My
+coworkers use it too."
+
+Estimate for one take of the proposed paragraph: 164 credits (about US$0.03).
