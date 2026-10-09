@@ -16,8 +16,8 @@ const WIPE = .4;                                          // a take change insid
 // FIG. captions: [t, number, name, typeAt]; a null name clears the caption. A name that extends the one before it
 // under the same number keeps typing instead of being struck back.
 const FIGS = [
-  [0, '1', 'Mabou, 1880s', -.6],
-  [5.38, '1', 'Mabou, 1880s · today'],
+  [0, '1', 'Mabou Highlands, 1880s', -1.0],
+  [5.38, '1', 'Mabou Highlands, 1880s · today'],
   [10.45, null, null],
   [13.33, '2', 'Where the data lives'],
   [21.97, '2', 'Queried live'],
@@ -49,7 +49,7 @@ captions.check(SUBS);
 
 // ---------- images ----------
 const IM = {
-  y1884: img('assets/stills/mabou-1884.png'), today: img('assets/stills/mabou-today.png'),
+  y1884: img('assets/stills/highlands-1884.png'), today: img('assets/stills/highlands-today.png'),
   sheetToday: img('assets/stills/sheet16-today.png'), scan: img('assets/scans/Fletcher sheet 16, Mabou (1884).jpg'),
   icon: img('assets/brand/app-icon.png'), logo: img('assets/brand/logo-mark-light.png'),
 };
@@ -138,8 +138,9 @@ async function clips(t, list, box) {
 const clipAt = (t, list) => { let i = 0; while (i + 1 < list.length && t >= list[i + 1].t0) i++; return list[i]; };
 
 // ---------- page 0: the cold open (0-10.45) ----------
-// Both stills are the same view (Mabou, 46.07 N 61.39 W, zoom 13), 2800 x 1576 px; Mabou sits at the view's centre,
-// (1440, 894) px, and the push-in scales about it, so the seam and the mark stay on the village.
+// Both stills are the same view (the Mabou Highlands on Fletcher's sheet 14, 46.158 N 61.36 W, zoom 13, framed north of
+// the gap at the sheets' join), 2800 x 1576 px; the view's centre sits at (1440, 894) px, and the push-in scales about
+// it, so the seam and the mark stay put.
 const MB = [1440, 894], KS = WIN[2] / 2800, MABOU = [WIN[0] + MB[0] * KS, WIN[1] + MB[1] * KS], SEAM = MABOU[0];
 function coldOpen(t) {
   const z = lerp(1, 1.07, ease(seg(t, 0, 10.6))), crop = [MB[0] - MB[0] / z, MB[1] - MB[1] / z, 2800 / z, 1576 / z];

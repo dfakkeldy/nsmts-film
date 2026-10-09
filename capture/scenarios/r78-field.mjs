@@ -1,12 +1,13 @@
-// R7 + R8, one phone session on the main map at Mabou: a GeoPDF exported from the map comes back in and its embedded
-// coordinates place it; "Use my location" puts the dot on it. Then field logging: mark a point, add a geotagged photo
-// (assets/photos/church-of-mabou.jpg, CC0, taken at Mabou's church), record a short track, and the layer list with
-// "Drawn on this device" and its export buttons. The location is emulated (Mabou village, public road), and so is
-// the short walk toward the church while the track records.
+// R7 + R8, one phone session on the main map in the Mabou Highlands: a GeoPDF exported from the map (the Fletcher
+// sheet over the western highlands, capture/export-geopdf.mjs) comes back in and its embedded coordinates place it;
+// "Use my location" puts the dot on it. Then field logging: mark a point, add a geotagged photo
+// (assets/photos/coal-mine-point.jpg, M. C. Rygel, CC BY-SA 3.0, taken at Coal Mine Point), record a short track, and
+// the layer list with "Drawn on this device" and its export buttons. The location is emulated (the public road
+// between Mabou Coal Mines and MacDonalds Glen), and so is the short walk north along it while the track records.
 // The container's Chromium predates a method PDF.js 6 uses (see capture/shim-upsert.mjs).
 // Record with: run-batch.sh record-steps.mjs r78-field.mjs:r78-field.mp4:--phone
 import { shimUpsert } from "../shim-upsert.mjs";
-const HERE = { latitude: 46.0712, longitude: -61.3928, accuracy: 6 };
+const HERE = { latitude: 46.126422, longitude: -61.459306, accuracy: 6 };
 export const options = {
   storage: { "ns-marks-the-spot:province-license:v1": "accepted" },
   geolocation: HERE,
@@ -22,12 +23,12 @@ export async function run(page, h) {
     await sleep(250);
     const xy = await h.find(name); if (!xy) throw new Error(`no button ${name}`); await h.click(xy[0], xy[1], s);
   };
-  await h.load("https://kinnokilabs.com/apps/nsmarksthespot/map/?basemap=day&taxSale=off&mode=current&layers=modern&position=46.07,-61.39,13", 12000);
+  await h.load("https://kinnokilabs.com/apps/nsmarksthespot/map/?basemap=day&taxSale=off&mode=current&layers=modern&position=46.15,-61.42,13", 12000);
   // before recording: open My Maps and load the GeoPDF, so the take opens on the frame chooser
   await tapName("⌕ Search & layers"); await sleep(1500);
   await page.evaluate(() => { for (const e of document.querySelectorAll("button")) if (e.innerText.replace(/\s+/g, " ").trim().startsWith("My Maps")) { e.scrollIntoView({ block: "center" }); e.click(); return; } });
   await sleep(1500);
-  await (await page.$('input[aria-label="Add a map file"]')).uploadFile("capture/downloads/nova-scotia-map-2026-10-09.pdf");
+  await (await page.$('input[aria-label="Add a map file"]')).uploadFile("capture/geopdf/nova-scotia-map-2026-10-09.pdf");   // made by capture/export-geopdf.mjs
   await sleep(12000);
   await h.start();
   // R7: choose the frame, place it, close the panel, find yourself on it
@@ -43,14 +44,14 @@ export async function run(page, h) {
   await tapName("Mark my location"); await h.wait(2.2);
   await tapName("⌕ Search & layers"); await h.wait(0.5);
   await tapName("Add photos to map"); await h.wait(0.4);
-  await (await page.$('input[type=file][aria-label="Choose photos to place"]')).uploadFile("assets/photos/church-of-mabou.jpg");
+  await (await page.$('input[type=file][aria-label="Choose photos to place"]')).uploadFile("assets/photos/coal-mine-point.jpg");
   await h.wait(1.2);
   await tapName("Create 1 point"); await h.wait(1.0);
   await tapName("Done"); await h.wait(0.3);
   await tapName("×"); await h.wait(1.2);
   await tapName("Record a track"); await h.wait(0.4);
-  for (let i = 1; i <= 10; i++) {    // walking north-west along the road toward the church
-    await page.setGeolocation({ latitude: HERE.latitude + i * 0.00017, longitude: HERE.longitude - i * 0.00014, accuracy: 5 });
+  for (let i = 1; i <= 10; i++) {    // walking north along the road, toward MacDonalds Glen
+    await page.setGeolocation({ latitude: HERE.latitude + i * 0.000416, longitude: HERE.longitude - i * 0.000026, accuracy: 5 });
     await h.wait(0.35);
   }
   await tapName("⌕ Search & layers"); await h.wait(0.6);

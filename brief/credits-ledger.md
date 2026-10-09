@@ -22,3 +22,14 @@ Every file not made by code: source, licence or terms, cost, date.
 
 GPS EXIF added from the file's recorded camera location on Commons (46.073007 N, 61.394436 W) and its capture time
 (2014:06:23 21:12:31), so "Add photos to map" places it where it was taken. No people or marks in frame.
+
+## 2026-10-09: field-log photo replaced (R8 moved to the Mabou Highlands)
+
+| File | Source | Licence | Cost |
+|---|---|---|---|
+| `assets/photos/coal-mine-point.jpg` | "Salt-diapir-Cape-Breton 022.JPG" ("Gypsum and anhydrite cap atop the Coal Mine Point salt diapir near Mabou Mines, Nova Scotia"), Michael C. Rygel, Wikimedia Commons (1280 px thumbnail, taken 2006-05-12) | CC BY-SA 3.0 | free |
+
+GPS EXIF added from the file's recorded camera location (46.124474 N, 61.465352 W) and capture time, so "Add photos to
+map" places it where it was taken. In the film the photo appears only by its filename and as a point on the map; its
+image is not shown. It replaces `church-of-mabou.jpg` (CC0), which sat outside the new GeoPDF's extent and is no
+longer used.

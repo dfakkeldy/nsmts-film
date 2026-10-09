@@ -1,11 +1,12 @@
-// R3: the Fletcher sheets at Mabou, switched to 3D terrain, then a slow turn (ctrl-drag) across the draped sheets.
+// R3: the Fletcher sheets over the Mabou Highlands (sheet 14, 1884; framed north of the gap at the join with sheet 16),
+// switched to 3D terrain, then a slow turn (ctrl-drag) across the draped sheets.
 // Recorded with record-steps.mjs: the 3D view stalls frame-controlled capture.
 export const options = {
   storage: { "ns-marks-the-spot:province-license:v1": "accepted" },
   noCache: true,
 };
 export async function run(page, h) {
-  await h.load("https://kinnokilabs.com/apps/nsmarksthespot/map/?basemap=day&taxSale=off&mode=current&layers=modern,fletcher&position=46.07,-61.39,13", 8000);
+  await h.load("https://kinnokilabs.com/apps/nsmarksthespot/map/?basemap=day&taxSale=off&mode=current&layers=modern,fletcher&position=46.15,-61.40,13", 8000);
   const btn = await h.find("3D terrain");
   if (!btn) throw new Error("no 3D terrain button");
   await h.during(page.mouse.click(...btn));
