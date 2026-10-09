@@ -493,5 +493,5 @@ ENDS.forEach(e => cue(e.t - .1, 'tick', { weight: .3 }));
 cue(27.0, 'pop', { weight: .45 });
 cue(38.45, 'land', { weight: .3 }); cue(48.25, 'land', { weight: .3 });
 cue(41.95, 'drop', { weight: .4 }); PAIR_T.forEach(p => cue(p, 'tick', { weight: .35 })); cue(44.1, 'whoosh', { weight: .3 });
-cue(RG_Z[0], 'whoosh', { weight: .2 }); cue(G0 + 2.32, 'tick', { weight: .35 });   // the zoom; the popup
+cue(RG_Z[0], 'whoosh', { weight: .2 }); cue(G0 + 2.32, 'tick', { weight: .5 });   // the zoom; the popup
 cue(later(89.4), 'tick'); cue(later(89.9), 'chime', { weight: .6 });
