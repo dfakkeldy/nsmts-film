@@ -13,5 +13,5 @@ python3 -I scripts/place-voice.py
 python3 -I $V sfx sound/cues.json -o sound/build/sfx.wav --score sound/score.json 2>&1 | tail -1
 python3 -I $V score sound/score.json -o sound/build/music.wav --cues sound/cues.json 2>&1 | tail -1
 python3 -I $V mix -o sound/build/mix.wav --music sound/build/music.wav --sfx sound/build/sfx.wav --voice sound/voice-placed.wav --cues sound/cues.json --duration "$DUR" 2>&1 | tail -1
-python3 -I $V master sound/build/mix.wav -o sound/build/master.wav --lufs -14 2>&1 | tail -1
+python3 -I $V master sound/build/mix.wav -o sound/build/master.wav --lufs -14 --tp -2.5 2>&1 | tail -1
 python3 -I $V analyze sound/build/master.wav --cues sound/cues.json --stem sound/build/sfx.wav --png sound/build/master.png 2>&1 | tail -6
