@@ -10,15 +10,22 @@
   },
   {
    "from_word": 170,
-   "offset": 3.773
+   "offset": 9.10633
   },
   {
    "from_word": 229,
-   "offset": 4.273
+   "offset": 9.60633
   },
   {
    "from_word": 262,
-   "offset": 4.773
+   "offset": 10.10633
+  }
+ ],
+ "inserts": [
+  {
+   "file": "sound/elevenlabs/goldmine-v1.wav",
+   "words": "sound/words/goldmine-v1.json",
+   "at": 57.95
   }
  ]
 }

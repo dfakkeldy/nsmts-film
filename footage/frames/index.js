@@ -39,5 +39,10 @@ const FOOTAGE = {
   "frames": 447,
   "w": 1170,
   "h": 2532
+ },
+ "rg-goldmine": {
+  "frames": 295,
+  "w": 1920,
+  "h": 1080
  }
 };

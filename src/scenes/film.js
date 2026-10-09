@@ -1,14 +1,19 @@
-// film.js: "NS Marks The Spot", a portfolio film for Dan Fakkeldy (96 s, 90 BPM). A book of numbered plates on paper
+// film.js: "NS Marks The Spot", a portfolio film for Dan Fakkeldy (101.3 s, 90 BPM). A book of numbered plates on paper
 // (looks/plates.js): drawn figures, stills from the live map, and recordings of the live site shown inside engraved
 // frames (a desktop window, a phone). The paper never cuts; it turns. One survey mark carries through and lands on
-// Dan's name. Times come from the narration (sound/words/film-v1.json) and the beat sheet (brief/beat-sheet.md).
+// Dan's name. Times come from the narration (sound/words/film-v2.json) and the beat sheet (brief/beat-sheet.md).
 
 const { add } = PLT;
 const INK = PLT.S.ink, RED = PLT.S.red, GRA = PLT.S.graphite, PAPER = PLT.S.paper, U = PLT.u;
 
 // ---------- the plan ----------
+// The gold-mine insert (two bars at 90 BPM) opens at GOLD.t0, between R3 and R4; everything after it plays GOLD.d
+// later. The times below are the first cut's: later() moves those past the insert, and the phone and end-card pages
+// keep their own clocks (the film hands them t - GOLD.d).
+const GOLD = { t0: 57.6, d: 2 * 4 * 60 / 90 };
+const later = t => t >= GOLD.t0 ? t + GOLD.d : t;
 // Pages slide across the fixed paper (a turn); SLIDES[k] is when page k leaves and page k + 1 arrives.
-const SLIDES = [10.45, 13.35, 30.55, 39.55, 45.75, 66.75, 88.95], SLIDE = .6;
+const SLIDES = [10.45, 13.35, 30.55, 39.55, 45.75, 66.75, 88.95].map(later), SLIDE = .6;
 const WIN = [300, 118, 1320, 742];                       // the desktop window (16:9, the takes' aspect)
 const SCR = [W / 2 - 171.5, 118, 343, 742];               // the phone's screen (390 x 844 points, scaled)
 const WIPE = .4;                                          // a take change inside a window
@@ -28,23 +33,26 @@ const FIGS = [
   [46.21, '4.2', 'Residuals'],
   [50.13, '4.3', 'Curved warp'],
   [54.09, '4.4', '24 Fletcher sheets'],
-  [58.13, '5', 'Small-hydro screening'],
-  [61.0, '5', 'Bare-earth viewshed'],
-  [64.29, '6', 'GeoPDF out'],
-  [67.29, '6', 'GeoPDF in'],
-  [70.37, '7', 'Field log'],
-  [76.39, '8', 'Pocket map'],
-  [78.95, '8', 'Driveway measured'],
-  [81.67, '8', 'Offline'],
-  [86.2, '9', 'iPhone, in TestFlight'],
-  [88.95, null, null],
+  [GOLD.t0 + .3, '4.5', 'Gold Mine, Glendale Brook, 1884'],
+  ...[
+    [58.13, '5', 'Small-hydro screening'],
+    [61.0, '5', 'Bare-earth viewshed'],
+    [64.29, '6', 'GeoPDF out'],
+    [67.29, '6', 'GeoPDF in'],
+    [70.37, '7', 'Field log'],
+    [76.39, '8', 'Pocket map'],
+    [78.95, '8', 'Driveway measured'],
+    [81.67, '8', 'Offline'],
+    [86.2, '9', 'iPhone, in TestFlight'],
+    [88.95, null, null],
+  ].map(([t, ...f]) => [later(t), ...f]),
 ];
 
-const VOICE = captions.load('sound/words/film-v1.json');
+const VOICE = captions.load('sound/words/film-v2.json');
 // one subtitle window a sentence, so a card never carries the end of one sentence into the next
 const SUB_STYLE = { color: INK, plate: false, edge: 'none', size: 44 };
 const SUBS = [[0, 'subtitle', SUB_STYLE],
-  ...VOICE.words.filter((w, i, a) => i > 0 && /[.!?]$/.test(a[i - 1].w)).map(w => [w.start - .001, 'subtitle', SUB_STYLE]), [88.9, null]];
+  ...VOICE.words.filter((w, i, a) => i > 0 && /[.!?]$/.test(a[i - 1].w)).map(w => [w.start - .001, 'subtitle', SUB_STYLE]), [later(88.9), null]];
 captions.check(SUBS);
 
 // ---------- images ----------
@@ -289,17 +297,40 @@ function georefPlate(t) {
   }
 }
 
-// ---------- page 5: the desktop takes (45.75-66.75) ----------
-// R2 the georeferencer (residuals; the curved warp), R3 the sheets on 3D terrain, R4 small hydro, R5 the viewshed,
-// R6 the GeoPDF export (the framing, then the dialog).
+// ---------- page 5: the desktop takes (45.75-72.08) ----------
+// R2 the georeferencer (residuals; the curved warp), R3 the sheets on 3D terrain, RG a gold mine on Fletcher's sheet,
+// R4 small hydro, R5 the viewshed, R6 the GeoPDF export (the framing, then the dialog).
+
+// RG: Fletcher's "Gold Mine" beside Glendale Brook (sheet 19, 1884; the app's reviewed feature F19-JUD-094). The
+// pointer finds the mark (its label shows on hover), the map zooms from 14 to 15, and the mark's popup opens: the
+// original scan excerpt, "Approximate historical location", the sheet and the ID. Leaflet ends its zoom on a real-time
+// timer, which frame-controlled capture outruns (the take jumps from 14 to 15 in one frame), so the zoom is drawn here
+// as Leaflet draws it: the zoom-14 picture scaled 2x about the mark, then the zoom-15 frames, cropped to the same ground.
+const RG = 'rg-goldmine', RG_MARK = [1250, 600], G0 = GOLD.t0;
+const RG_Z = [G0 + 1.15, G0 + 1.45], LEAFLET_ZOOM = bezier(0, 0, .25, 1);   // Leaflet's zoom: 0.25 s, this curve
+const RG_14 = [[G0 - .2, .95], [G0 + .3, 1.0], [G0 + .95, 2.05], [RG_Z[0], 2.6]];          // the glide; the hover label
+const RG_15 = [[RG_Z[1], 3.2], [G0 + 2.05, 3.9], [G0 + 2.2, 5.45], [G0 + 5.6, 8.85]];      // the popup opens at 5.57
+const RG_C = [550, 178, 1000], RG_POP = [800, 108, 900];   // the view at both zooms (the same size, so the same ground;
+// clear of the green-striped and cross-hatched units at 14); the popup with its mark
+async function goldMine(t, box) {
+  if (t < RG_Z[1]) {
+    const s = 2 ** LEAFLET_ZOOM(seg(t, RG_Z[0], RG_Z[1])), h = RG_C[2] * box[3] / box[2];
+    const rx = (RG_MARK[0] - RG_C[0]) / RG_C[2], ry = (RG_MARK[1] - RG_C[1]) / h;
+    return take(RG, takeTime(t, RG_14), box, [RG_MARK[0] - rx * RG_C[2] / s, RG_MARK[1] - ry * h / s, RG_C[2] / s, h / s]);
+  }
+  return take(RG, takeTime(t, RG_15), box, cropAt(t, [[G0 + 2.15, RG_C], [G0 + 2.95, RG_POP]], box));
+}
 const TAKES_B = [
   { t0: 45.75, name: 'r2-georef', T: [[45.75, .2], [51.8, 3.55], [54.25, 7.95]], C: [[0, [0, 0, 1500]]],
     lens: { at: [700, 201], t0: 48.25, t1: 49.9, r: 130, mag: 1.8 } },
   { t0: 54.05, name: 'r3-terrain', T: [[53.85, .6], [57.8, 5.0]], C: [[0, [330, 0, 1590]]] },
-  { t0: 57.6, name: 'r4-hydro', T: [[57.4, 3.0], [59.57, 4.8], [61.2, 6.5]], C: [[59.3, [600, 60, 1100]], [60.1, [820, 120, 800]]] },
-  { t0: 61.0, name: 'r5-viewshed', T: [[60.8, .3], [62.6, 2.6], [64.4, 5.9]], C: [[62.5, [500, 160, 1400]], [63.2, [800, 380, 1110]]] },
-  { t0: 64.2, name: 'r6-export', T: [[64.0, 3.4], [65.35, 6.0]], C: [[0, [40, 0, 1700]]] },   // stops above the sheets' join at the map's foot
-  { t0: 65.15, name: 'r6-export', T: [[64.95, 8.3], [66.2, 11.3], [67.4, 14.0]], C: [[0, [480, 230, 960]]] },
+  { t0: G0, name: RG, draw: goldMine },
+  ...[
+    { t0: 57.6, name: 'r4-hydro', T: [[57.4, 3.0], [59.57, 4.8], [61.2, 6.5]], C: [[59.3, [600, 60, 1100]], [60.1, [820, 120, 800]]] },
+    { t0: 61.0, name: 'r5-viewshed', T: [[60.8, .3], [62.6, 2.6], [64.4, 5.9]], C: [[62.5, [500, 160, 1400]], [63.2, [800, 380, 1110]]] },
+    { t0: 64.2, name: 'r6-export', T: [[64.0, 3.4], [65.35, 6.0]], C: [[0, [40, 0, 1700]]] },   // stops above the sheets' join at the map's foot
+    { t0: 65.15, name: 'r6-export', T: [[64.95, 8.3], [66.2, 11.3], [67.4, 14.0]], C: [[0, [480, 230, 960]]] },
+  ].map(c => ({ ...c, t0: c.t0 + GOLD.d, T: c.T.map(([a, b]) => [a + GOLD.d, b]), C: c.C.map(([a, b]) => [a + GOLD.d, b]) })),
 ];
 async function desktopPage(t) {
   await clips(t, TAKES_B, WIN);
@@ -308,7 +339,7 @@ async function desktopPage(t) {
   if (c.lens && t > c.lens.t0 && t < (c.lens.t1 ?? Infinity) + .5 && hasTake(c.name)) await footLens(c.name, takeTime(t, c.T), cropAt(t, c.C, WIN), WIN, c.lens.at, c.lens.r * U, c.lens.mag, glide(t, c.lens.t0, c.lens.t1));
 }
 
-// ---------- page 6: the phone (66.75-88.95) ----------
+// ---------- page 6: the phone (72.08-94.28; the times below are its own clock, 66.75-88.95) ----------
 // R7 a GeoPDF on the phone with the location dot, R8 field logging, R9 the pocket map (Poker), then the iPhone app:
 // its real icon in the engraved phone, no app screens.
 const BODY = [SCR[0] - 18 * U, SCR[1] - 18 * U, SCR[2] + 36 * U, SCR[3] + 36 * U];
@@ -387,7 +418,7 @@ async function phonePage(t) {
   }
 }
 
-// ---------- page 7: the end card (88.95-96) ----------
+// ---------- page 7: the end card (94.28-101.33; its own clock, 88.95-96) ----------
 function endCard(t) {
   const d = EASE.outExpo(seg(t, 89.85, 90.3));
   mark([W / 2, lerp(300, 340, d) * U], 30 * U, seg(t, 89.4, 90.1));
@@ -432,7 +463,7 @@ function figCaption(t, figs, o) {
 }
 
 // ---------- the film ----------
-const PAGES = [coldOpen, titlePage, dataPlate, parcelPage, georefPlate, desktopPage, phonePage, endCard];
+const PAGES = [coldOpen, titlePage, dataPlate, parcelPage, georefPlate, desktopPage, t => phonePage(t - GOLD.d), t => endCard(t - GOLD.d)];
 function pageDx(t, k) {
   let dx = 0;
   if (k > 0) { const s = SLIDES[k - 1]; if (t < s) return null; dx += W * (1 - EASE.inOut(seg(t, s, s + SLIDE))); }
@@ -449,17 +480,18 @@ async function film(t) {
   PLT.margins();
   figCaption(t, FIGS, { x: 470 * U, y: 86 * U, size: 40 * U });
   captions.draw(t, SUBS);
-  credits(t);
+  credits(t - GOLD.d);
   PLT.finish();
 }
 shots([[0, (t) => film(t)]]);
 
 // ---------- sound cues, from the same times ----------
 SLIDES.forEach(s => cue(s + .05, 'swish', { weight: .35 }));
-[...TAKES_B.slice(1), ...TAKES_P.slice(1)].forEach(c => cue(c.t0 - WIPE / 2, 'swish', { weight: .2 }));
+[...TAKES_B.slice(1).map(c => c.t0), ...TAKES_P.slice(1).map(c => c.t0 + GOLD.d)].forEach(t0 => cue(t0 - WIPE / 2, 'swish', { weight: .2 }));
 cue(9.85, 'tick'); cue(10.6, 'tick', { weight: .7 }); cue(15.6, 'tick', { weight: .6 });
 ENDS.forEach(e => cue(e.t - .1, 'tick', { weight: .3 }));
 cue(27.0, 'pop', { weight: .45 });
 cue(38.45, 'land', { weight: .3 }); cue(48.25, 'land', { weight: .3 });
 cue(41.95, 'drop', { weight: .4 }); PAIR_T.forEach(p => cue(p, 'tick', { weight: .35 })); cue(44.1, 'whoosh', { weight: .3 });
-cue(89.4, 'tick'); cue(89.9, 'chime', { weight: .6 });
+cue(RG_Z[0], 'whoosh', { weight: .2 }); cue(G0 + 2.32, 'tick', { weight: .35 });   // the zoom; the popup
+cue(later(89.4), 'tick'); cue(later(89.9), 'chime', { weight: .6 });

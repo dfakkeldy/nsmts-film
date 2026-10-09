@@ -4,7 +4,7 @@
 
 **Voice:** narration v1.2 (84.1 s) placed on the film with breathing room: +0.40 s at the start, +2.37 s after
 the cold open (title), +1.0 s after georeferencing, +0.5 s before the pocket map, +0.5 s before the iPhone line.
-Layout: `sound/voice-layout.json`. Film-time word timings: `sound/words/film-v1.json`.
+Layout: `sound/voice-layout.json`. Film-time word timings: `sound/words/film-v2.json` (written by scripts/place-voice.py; the first cut used film-v1.json).
 
 **Grammar:** a book of numbered plates on Fletcher paper (the `plates` look). Code-drawn figures, and Dan's
 recordings shown as figures inside engraved frames (desktop) or an engraved phone outline (phone). The paper never

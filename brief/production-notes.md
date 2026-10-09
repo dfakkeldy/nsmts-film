@@ -11,11 +11,12 @@ recording. The takes are recordings of the live site, kinnokilabs.com, made in t
 | R1 | 5471 Highway 19 searched, PID 50169663's sheet scrolling through its checks | frame-controlled, 1920 x 1080 | 30.6-39.6 s, with a loupe on "No mapped water feature intersects this parcel." |
 | R2 | Fletcher sheet 16 in the georeferencer: residuals, point 4 off most (180 m), curved warp, a drag and Undo | step capture | 45.8-54.1 s, loupe on point 4's row |
 | R3 | The Fletcher sheets on 3D terrain over the Mabou Highlands (zoom 14), a slow turn west | step capture, browser cache off (see below) | 54.1-57.6 s |
-| R4 | Inverness micro-hydro screen: Margaree R. reach popup | frame-controlled | 57.6-61.0 s, pushed in on the popup |
-| R5 | Rhodena turbine visibility, viewpoint at Long Point: 2 of 6 tips potentially visible | step capture | 61.0-64.2 s |
-| R6 | Export map (PDF) over the Mabou Highlands: frame drag, the dialog, "Mabou Highlands, 1884" typed, Download | frame-controlled | 64.2-66.8 s (sped up; the wait between framing and dialog is cut; cropped above the sheets' join at the map's foot) |
-| R7 + R8 | Phone, one session in the Mabou Highlands: an exported GeoPDF of the highlands imported (frame chooser), the location dot on it; Mark my location; Add photos to map; Record a track; the layer list with export buttons | step capture, phone size | 66.8-76.1 s, as six short clips with wipes |
-| R9 | Poker on the phone: 5471 Highway 19, aerial, driveway trace (36.2 m, within 500 m), offline reload | step capture, phone size | 76.1-86.2 s, as three clips |
+| RG | Fletcher sheet 19's "Gold Mine" beside Glendale Brook (reviewed feature F19-JUD-094): the label on hover, zoom 14 to 15, the popup with the scan excerpt | frame-controlled | 57.6-62.9 s, the zoom drawn in the film (see below), pushed in on the popup |
+| R4 | Inverness micro-hydro screen: Margaree R. reach popup | frame-controlled | 62.9-66.3 s, pushed in on the popup |
+| R5 | Rhodena turbine visibility, viewpoint at Long Point: 2 of 6 tips potentially visible | step capture | 66.3-69.5 s |
+| R6 | Export map (PDF) over the Mabou Highlands: frame drag, the dialog, "Mabou Highlands, 1884" typed, Download | frame-controlled | 69.5-72.1 s (sped up; the wait between framing and dialog is cut; cropped above the sheets' join at the map's foot) |
+| R7 + R8 | Phone, one session in the Mabou Highlands: an exported GeoPDF of the highlands imported (frame chooser), the location dot on it; Mark my location; Add photos to map; Record a track; the layer list with export buttons | step capture, phone size | 72.1-81.4 s, as six short clips with wipes |
+| R9 | Poker on the phone: 5471 Highway 19, aerial, driveway trace (36.2 m, within 500 m), offline reload | step capture, phone size | 81.4-91.5 s, as three clips |
 
 Frame-controlled capture stalls on modal dialogs, the georeferencer panel, the Rhodena page and the 3D view, so those
 were step-captured: one screenshot per recorded frame, with the page running in real time.
@@ -77,6 +78,30 @@ moved to the Mabou Highlands on sheet 14 ("Cape Mabou / Broad Cove", 1884), fram
 cold open (46.158 N 61.36 W, zoom 13), R3 (zoom 14, turning west, away from the east join near 61.225 W), R6 (cropped
 above the join) and the GeoPDF in R7 (46.090-46.211 N, no join inside). The narration still says "Mabou"; the
 captions say "Mabou Highlands". The georeferencing plate and R2 still show sheet 16's scan, as the document itself.
+
+## The gold-mine insert (Dan, 2026-10-09)
+
+Dan asked for a few seconds on "a feature that you wouldn't know existed without the Fletcher maps", suggesting "a
+gold mine in Glendale". Sheet 19 (1884) has two "Gold Mine" marks in the app's reviewed features layer:
+
+- **F19-JUD-061** (the one in Dan's screenshot, with the Quartz Mill): about 1 km from today's Melford, by Fletcher's
+  "River Denys Road"; about 10 km from Glendale. Not used.
+- **F19-JUD-094** (used): "west of the curving road and Glendale Brook"; Fletcher's own "Glendale" label is 2.6 km to
+  the south-east and his "Glendale Brook" label 1.2 km. Dan corroborated this locality in the placement pilot
+  (September 6). Nearby provincial records, kept as candidates only (reports/fletcher/placement-pilot in the app
+  repo): an unnamed gold shaft, Abandoned Mine Openings GBG-1-001, about 40 m away, and the "Camerons Mountain Au, As,
+  Pb, Cu" occurrence, MODB F14-017. So the narration says "near Glendale", and the caption names Glendale Brook. The
+  popup itself says "Approximate historical location".
+
+Two bars (5.33 s at 90 BPM) open at 57.6 s, between R3 and R4; everything after moves two bars later, so the cuts stay
+on the bar lines (film length 101.33 s). The score now lists its chords bar by bar: the first cut's I-vi-IV-V cycle,
+with IV-V as the two new bars, so the chords after the insert are the ones the first cut had there.
+
+The take is framed with the mark lower right, which keeps the green-striped unit south-east of it and the
+cross-hatched unit to the north-west almost out of view. Leaflet ends its zoom animation on a real-time timer, and
+frame-controlled capture renders more slowly than real time, so the take jumps from zoom 14 to 15 in one frame. The
+film draws the zoom as Leaflet does: the zoom-14 picture scaled 2x about the mark over 0.3 s (Leaflet's curve), then
+the zoom-15 frames, cropped to the same ground.
 
 ## Decisions (Dan, 2026-10-09)
 

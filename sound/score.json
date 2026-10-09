@@ -1,18 +1,18 @@
 {
   "bpm": 90, "meter": 4, "key": "D major", "offset": 0.0,
-  "progression": ["I", "vi", "IV", "V"],
+  "chords": ["I", "vi", "IV", "V", "I", "vi", "IV", "V", "I", "vi", "IV", "V", "I", "vi", "IV", "V", "I", "vi", "IV", "V", "I", "vi", "IV", "V", "IV", "V", "I", "vi", "IV", "V", "I", "vi", "IV", "V", "I", "vi", "IV", "V"],
   "sections": [
     {"bars": [1, 4], "style": "intro"},
     {"bars": [5, 5], "style": "outro", "level": 0.9},
     {"bars": [6, 14], "style": "groove", "level": 0.7},
     {"bars": [15, 15], "style": "build", "level": 0.8},
     {"bars": [16, 21], "style": "drop", "level": 0.8},
-    {"bars": [22, 28], "style": "groove", "level": 0.72},
-    {"bars": [29, 33], "style": "breakdown"},
-    {"bars": [34, 34], "style": "silence"},
-    {"bars": [35, 35], "style": "outro"},
-    {"bars": [36, 36], "style": "hold"}
+    {"bars": [22, 30], "style": "groove", "level": 0.72},
+    {"bars": [31, 35], "style": "breakdown"},
+    {"bars": [36, 36], "style": "silence"},
+    {"bars": [37, 37], "style": "outro"},
+    {"bars": [38, 38], "style": "hold"}
   ],
   "instruments": {"lead": "piano", "keys": "musicbox", "pad": true, "bass": true, "drums": false, "bells": true},
-  "duration": 96.0, "seed": 7
+  "duration": 101.333333, "seed": 7
 }
