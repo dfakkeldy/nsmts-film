@@ -25,3 +25,5 @@ C10 (2026-10-08): "I know almost every address in the 3 postal codes so I don't 
 C11 (2026-10-09, on narration v1): "I don't really think me bragging about knowing every address was necessary."
 
 C12 (2026-10-09, on narration v1.1): "all the takes sound exactly the same, but I still think the wording after the part you cut sounds like a weird way to say it, and now it's even weirder because I'm saying one day I couldn't find a house, and then I built it for who comes next. Figure out something better to say."
+
+C13 (2026-10-09, on beat sheet v1): "replace me with you for every instance where you thought I was going to do it, and we're good."

@@ -1,0 +1,13 @@
+# sheet-16 Fletcher graticule points, scaled by 0.277213 from the full sheet (10,822 px wide) to this 3000 px download.
+# Source: ns-marks-the-spot tools/fletcher/gcps/sheet-16.csv. Scaled for the portfolio film's georeferencer demo only.
+pixel_x,pixel_y,lon,lat,role,label
+482.1,388.1,-61.583333,46.083333,check,61d35mW 46d05mN
+983.0,391.4,-61.500000,46.083333,control,61d30mW 46d05mN
+1473.4,395.3,-61.416667,46.083333,control,61d25mW 46d05mN
+1975.1,398.1,-61.333333,46.083333,control,61d20mW 46d05mN
+2498.5,400.0,-61.250000,46.083333,control,61d15mW 46d05mN
+477.9,1111.3,-61.583333,46.000000,control,61d35mW 46d00mN
+985.2,1113.0,-61.500000,46.000000,control,61d30mW 46d00mN
+1479.5,1117.4,-61.416667,46.000000,control,61d25mW 46d00mN
+1972.1,1121.3,-61.333333,46.000000,control,61d20mW 46d00mN
+2498.8,1124.7,-61.250000,46.000000,check,61d15mW 46d00mN
