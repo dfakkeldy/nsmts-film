@@ -41,3 +41,8 @@ know almost every address now. I built it for whoever starts next.
 It's also a native iPhone app, in TestFlight.
 
 10. End card (silence, then the mark lands on the name)
+
+## v1.1 (2026-10-09)
+
+Dan (C11): cut "I know almost every address now." The audio is cut from the chosen v1 take at its word timings,
+not regenerated. Text: brief/narration-v1.1.txt.

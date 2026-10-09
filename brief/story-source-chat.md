@@ -21,3 +21,5 @@ C8 (2026-10-08, do coworkers use Poker): "Yes."
 C9 (2026-10-08, staged address): "5471 highway 19" ... "Yeah 5471 is the interpretive centre. I think of them as the same thing."
 
 C10 (2026-10-08): "I know almost every address in the 3 postal codes so I don't need the app as much as I used to. New person starting next week will probably love it."
+
+C11 (2026-10-09, on narration v1): "I don't really think me bragging about knowing every address was necessary."
